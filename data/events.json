@@ -13,11 +13,11 @@
   "115660540726095007": {
     "best_of": 1,
     "id": "115660540726095007",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-23T22:28:11Z",
+    "sequence": 1,
     "stage": "Swiss",
     "start": "2026-10-23T22:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "TLAW",
     "team2": "CFO"
   },
@@ -35,11 +35,11 @@
   "115660540726095011": {
     "best_of": 1,
     "id": "115660540726095011",
-    "last_modified": "2026-10-23T21:29:03Z",
-    "sequence": 2,
+    "last_modified": "2026-10-23T22:28:11Z",
+    "sequence": 3,
     "stage": "Swiss",
     "start": "2026-10-23T21:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "DK",
     "team2": "G2"
   },
