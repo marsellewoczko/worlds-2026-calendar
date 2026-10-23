@@ -17,3 +17,13 @@
 - Live local generation produced 46 events. Real Chromium checks passed at mobile (390px) and desktop widths in Europe/Warsaw and America/New_York: PL/EN, saved preference, exact local times, match counts, no horizontal overflow, webcal link, HTTP ICS response and clipboard content. Disabled localStorage did not break rendering or language selection.
 - Tests use fixtures only in tests; the production snapshot is generated only by authenticated live API requests.
 - Saved additional network requirements for api.github.com and marsellewoczko.github.io alongside the existing esports-api.lolesports.com rule. Draft saving alone does not apply policy or publish the environment.
+
+## 2026-10-23 — Remote delivery and confirmed deployment blocker
+
+- Generated the tracked production snapshot directly from the live API: 46 events. Verified output event count, CRLF line endings and the 75-octet folding limit.
+- Committed and pushed [`dfd1ae0`](https://github.com/marsellewoczko/worlds-2026-calendar/commit/dfd1ae0314046564e9fca8e0e88dcebc17d6969e) to main with a normal fast-forward push; remote SHA was verified.
+- GitHub API and Pages became reachable after network settings propagation. [Tests run 39913285145](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/39913285145) completed successfully.
+- [Publish run 39913285142](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/39913285142) passed tests, live schedule generation and snapshot persistence. It failed at configure-pages; artifact upload and deployment were skipped.
+- Repository is public, default branch main. GET Pages configuration returned 404. Attempted authorized activation using POST /repos/marsellewoczko/worlds-2026-calendar/pages with build_type=workflow; GitHub denied the integration with HTTP 403 (Resource not accessible by integration). No settings were changed by that failed request.
+- Both public HTML and calendar.ics returned HTTP 404. Deployment cannot be claimed. Detailed downloadable Actions logs were inaccessible on a separate logs hostname, but the run/job API exposed the failed step and all preceding outcomes.
+- Required owner action: Settings → Pages → Build and deployment → Source: GitHub Actions; then manually run the publish workflow on main or rerun the failed job. README contains the acceptance checklist. Calendar-account acceptance remains unrun.
