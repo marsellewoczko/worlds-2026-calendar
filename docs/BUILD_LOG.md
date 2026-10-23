@@ -27,3 +27,9 @@
 - Repository is public, default branch main. GET Pages configuration returned 404. Attempted authorized activation using POST /repos/marsellewoczko/worlds-2026-calendar/pages with build_type=workflow; GitHub denied the integration with HTTP 403 (Resource not accessible by integration). No settings were changed by that failed request.
 - Both public HTML and calendar.ics returned HTTP 404. Deployment cannot be claimed. Detailed downloadable Actions logs were inaccessible on a separate logs hostname, but the run/job API exposed the failed step and all preceding outcomes.
 - Required owner action: Settings → Pages → Build and deployment → Source: GitHub Actions; then manually run the publish workflow on main or rerun the failed job. README contains the acceptance checklist. Calendar-account acceptance remains unrun.
+
+## 2026-10-23 — Owner activated Pages
+
+- Owner supplied screenshots showing GitHub Actions saved as the Pages source and manual workflow dispatch.
+- Verified through GitHub API: build_type=workflow, https_enforced=true, expected public URL.
+- Manual publish run [39916652277](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/39916652277) is queued for a runner, with no steps started at this observation. Public HTML/ICS still return 404 pending first deployment. The prior activation blocker is resolved.
