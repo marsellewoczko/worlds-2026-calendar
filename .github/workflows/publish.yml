@@ -2,6 +2,13 @@ name: Sync and publish Worlds 2026 calendar
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - sync.py
+      - template.html
+      - tests/**
+      - .github/workflows/publish.yml
   schedule:
     - cron: "7,37 * * * *"
 
@@ -17,6 +24,7 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}

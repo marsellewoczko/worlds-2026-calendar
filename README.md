@@ -38,3 +38,37 @@ python -m unittest discover -s tests -v
 ```
 
 MIT license. All Riot Games marks remain the property of their respective owners.
+
+## Development and verification
+
+Use Python **3.12** (matching CI). Runtime dependencies: none.
+
+```bash
+python -B -m unittest discover -s tests -v
+python -B sync.py --state .local/events.json --site .local/site
+python -B -m http.server 8000 --directory .local/site
+```
+
+The local paths keep development output separate from the durable production snapshot. Running `python sync.py` without overrides updates `data/events.json` and generates `site/`. Only real matches returned by the API enter the production snapshot. `LOL_ESPORTS_API_KEY` optionally overrides the public website key; `WORLDS_LEAGUE_ID` optionally overrides league discovery. Do not commit secret values.
+
+Optional real-browser checks (requires Playwright and a Chromium installation):
+
+```bash
+python -m pip install playwright
+python -B tools/browser_smoke.py http://127.0.0.1:8000 --chromium /usr/bin/chromium
+```
+
+This checks mobile/desktop layout, local match times in two timezones, PL/EN, clipboard, subscription links and restricted browser storage. Test fixtures never populate the production schedule. No third-party Python package is needed for the scheduled sync or unit tests.
+
+## Deployment acceptance checklist
+
+1. In **Settings → Pages**, choose **GitHub Actions** as the source. No custom domain is required.
+2. In **Settings → Actions → General**, enable Actions. If saving the snapshot is denied, allow **Read and write permissions** where repository/organization policy permits it.
+3. In **Settings → Environments → github-pages**, allow deployments from `main`; resolve any required reviewer gate deliberately.
+4. Open **Actions → Sync and publish Worlds 2026 calendar → Run workflow**, select `main`. Tests, sync, snapshot commit and Pages deployment must all succeed. Relevant code pushes to `main` also trigger this workflow; snapshot commits do not trigger a deployment loop.
+5. Request both public URLs above. Confirm HTML displays real matches and `calendar.ics` returns HTTP 200 with `BEGIN:VCALENDAR`, stable `UID` values and current events. A source failure must leave the previously deployed site and committed snapshot intact.
+6. Subscribe using the URL (never a one-time file import): Google Calendar → **Other calendars → From URL**; Apple Calendar → **New Calendar Subscription**; Outlook web → **Add calendar → Subscribe from web**. Verify the same UID is updated after a genuine upstream change. Refresh frequency is controlled by each provider; do not claim instant synchronization.
+
+The generator uses UTC in ICS; the page formats times in the visitor's local timezone. Explicit cancellation states are published as `STATUS:CANCELLED`. Missing matches are retained because rolling source pages are not cancellation notices. If upstream changes a match ID or omits cancellation details, manual review may be needed. Empty or unusable current-season API data fails the job rather than silently republishing a stale feed as fresh. Render/API failures keep the previous local outputs; deployment stops before uploading a failed build. Individual output replacements are atomic, not a transaction across all files.
+
+See [project status](docs/PROJECT_STATUS.md), [build log](docs/BUILD_LOG.md) and [technical decisions](docs/DECISIONS.md) for verified progress and remaining acceptance checks.

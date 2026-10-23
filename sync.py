@@ -11,6 +11,8 @@ import json
 import os
 import re
 import time
+import tempfile
+import argparse
 
 ROOT = Path(__file__).resolve().parent
 SITE = ROOT / "site"
@@ -125,6 +127,11 @@ def team_name(team):
 
 
 def normalized(event):
+    if not isinstance(event, dict):
+        return None
+    league = event.get("league")
+    if isinstance(league, dict) and league.get("slug") not in (None, "worlds"):
+        return None
     if event.get("type") not in (None, "match"):
         return None
     try:
@@ -162,10 +169,12 @@ def normalized(event):
 def merge(previous, events, current):
     result = dict(previous)
     changes = 0
+    accepted = 0
     for raw in events:
         item = normalized(raw)
         if not item:
             continue
+        accepted += 1
         prior = result.get(item["id"])
         old_data = {k: v for k, v in (prior or {}).items() if k not in ("sequence", "last_modified")}
         if item == old_data:
@@ -174,7 +183,7 @@ def merge(previous, events, current):
         item["last_modified"] = current.isoformat().replace("+00:00", "Z")
         result[item["id"]] = item
         changes += 1
-    if not result:
+    if not accepted:
         raise RuntimeError("No matching Worlds 2026 events; refusing to publish an empty feed")
     return result, changes
 
@@ -184,7 +193,7 @@ def ordered(state):
 
 
 def ical_escape(text):
-    return str(text).replace("\\", "\\\\").replace("\n", "\\n").replace(";", "\\;").replace(",", "\\,")
+    return str(text).replace("\r\n", "\n").replace("\r", "\n").replace("\\", "\\\\").replace("\n", "\\n").replace(";", "\\;").replace(",", "\\,")
 
 
 def folded(line):
@@ -250,6 +259,22 @@ def make_html(state, current):
     return template.replace("%%EVENTS%%", data).replace("%%UPDATED%%", escape(current.strftime("%d %b %Y, %H:%M UTC")))
 
 
+def atomic_write(path, content):
+    """Replace each output only after its complete contents have been written."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=path.parent, delete=False) as stream:
+            temporary = Path(stream.name)
+            stream.write(content)
+            stream.flush()
+            os.fsync(stream.fileno())
+        temporary.replace(path)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
 def run():
     current = now_utc()
     identifier = league_id()
@@ -258,15 +283,23 @@ def run():
     if not isinstance(state, dict):
         raise ValueError("State file is corrupt")
     merged, changes = merge(state, incoming, current)
-    SITE.mkdir(parents=True, exist_ok=True)
-    (SITE / "calendar.ics").write_bytes(make_ics(merged).encode("utf-8"))
-    (SITE / "index.html").write_text(make_html(merged, current), encoding="utf-8")
-    (SITE / ".nojekyll").write_text("", encoding="utf-8")
+    # Render everything before replacing any existing output. API/schema/render
+    # failures must leave the last successful build and state untouched.
+    ics = make_ics(merged).encode("utf-8")
+    html = make_html(merged, current).encode("utf-8")
+    state_bytes = (json.dumps(merged, indent=2, ensure_ascii=False, sort_keys=True) + "\n").encode("utf-8")
+    atomic_write(SITE / "calendar.ics", ics)
+    atomic_write(SITE / "index.html", html)
+    atomic_write(SITE / ".nojekyll", b"")
     if merged != state:
-        STATE.parent.mkdir(parents=True, exist_ok=True)
-        STATE.write_text(json.dumps(merged, indent=2, ensure_ascii=False, sort_keys=True) + "\n", encoding="utf-8")
+        atomic_write(STATE, state_bytes)
     print(f"Worlds league={identifier}; Riot events={len(incoming)}; published={len(merged)}; changed={changes}")
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--state", type=Path, default=STATE)
+    parser.add_argument("--site", type=Path, default=SITE)
+    args = parser.parse_args()
+    STATE, SITE = args.state.resolve(), args.site.resolve()
     run()
