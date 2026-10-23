@@ -2,11 +2,11 @@
   "115660540726095005": {
     "best_of": 1,
     "id": "115660540726095005",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-23T17:07:42Z",
+    "sequence": 1,
     "stage": "Swiss",
     "start": "2026-10-23T17:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "GEN",
     "team2": "IG"
   },
