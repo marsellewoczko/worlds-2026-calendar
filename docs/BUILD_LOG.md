@@ -33,3 +33,5 @@
 - Owner supplied screenshots showing GitHub Actions saved as the Pages source and manual workflow dispatch.
 - Verified through GitHub API: build_type=workflow, https_enforced=true, expected public URL.
 - Manual publish run [39916652277](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/39916652277) is queued for a runner, with no steps started at this observation. Public HTML/ICS still return 404 pending first deployment. The prior activation blocker is resolved.
+
+- Follow-up API observation: run advanced to waiting on github-pages, still without started steps. Environment policy allows main, has no reviewers and wait_timer=0; current_user_can_approve=false. No protection settings were weakened or changed.
