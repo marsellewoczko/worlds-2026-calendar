@@ -24,13 +24,13 @@
   "115660540726095009": {
     "best_of": 1,
     "id": "115660540726095009",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-23T20:28:24Z",
+    "sequence": 1,
     "stage": "Swiss",
     "start": "2026-10-23T20:00:00Z",
-    "state": "unstarted",
-    "team1": "AL",
-    "team2": "KC"
+    "state": "inProgress",
+    "team1": "KC",
+    "team2": "AL"
   },
   "115660540726095011": {
     "best_of": 1,
@@ -79,11 +79,11 @@
   "115660540726095019": {
     "best_of": 1,
     "id": "115660540726095019",
-    "last_modified": "2026-10-23T19:11:01Z",
-    "sequence": 1,
+    "last_modified": "2026-10-23T20:28:24Z",
+    "sequence": 2,
     "stage": "Swiss",
     "start": "2026-10-23T19:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "MKOI",
     "team2": "BLG"
   },
