@@ -6,12 +6,28 @@
 <title>Worlds 2026 — Match Calendar | Marsel Lewoczko</title>
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#0a1220;color:#f2f5fa}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#1e3b55 0,transparent 55%),#0a1220;min-height:100vh}main{max-width:920px;padding:30px 22px 90px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:16px}.mark{font-size:13px;font-weight:800;letter-spacing:.15em;color:#e2ba79}a{color:#ebc890;text-decoration:none}a:hover{text-decoration:underline}.language{display:flex;gap:9px}.language button{cursor:pointer;background:#7dd3c0;color:#102030;border:1px solid transparent;padding:9px 13px;border-radius:9px;font-weight:650}.language button[aria-pressed=true]{background:#e2ba79;color:#121924}h1{font-size:clamp(40px,7vw,74px);line-height:1.04;letter-spacing:-.055em;margin:75px 0 24px}h1 em{font-style:normal;color:#e2ba79}.hero-credit{font-size:14px;color:#c2cedd;margin:-8px 0 22px;line-height:1.6}.hero-credit a{font-weight:750}.lead{color:#c2cedd;font-size:18px;line-height:1.65;max-width:630px}section{border:1px solid #294059;background:rgba(19,32,49,.84);border-radius:18px;padding:28px;margin-top:25px}h2{font-size:24px;letter-spacing:-.03em;margin:5px 0 12px}.eyebrow{color:#e2ba79;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin:23px 0}.button{display:inline-block;border:0;border-radius:10px;padding:13px 18px;font-weight:750;font-size:14px;background:#e2ba79;color:#102030;text-decoration:none;cursor:pointer}.button.secondary{background:#7dd3c0;color:#102030}.button.google{background:#a5b4fc;color:#102030}.button:hover{filter:brightness(1.08);text-decoration:none}.button:focus-visible,.language button:focus-visible{outline:3px solid #fff;outline-offset:4px}.small{font-size:13px;line-height:1.65;color:#a9bbd1}.stat{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:#a9bcd1;margin:16px 0}.stat strong{color:white}.date{margin-top:29px;font-weight:750;font-size:18px}.event{display:grid;grid-template-columns:90px 1fr auto;gap:12px;padding:16px 0;border-bottom:1px solid #2d4058;align-items:center}.time{font-variant-numeric:tabular-nums;color:#e2ba79;font-weight:750}.teams{font-weight:700}.sub{font-size:12px;color:#98adc6;margin-top:5px}.chip{font-size:12px;border:1px solid #52677c;border-radius:7px;padding:4px 8px}footer{margin-top:45px;color:#9caec4;font-size:13px;line-height:1.8;border-top:1px solid #263d54;padding-top:22px}footer .credit{font-size:16px;color:#f2f5fa;margin-bottom:10px}code{overflow-wrap:anywhere}@media(max-width:550px){h1{margin-top:58px}.event{grid-template-columns:67px 1fr}.chip{grid-column:2;justify-self:start}section{padding:20px}}
+.event-example{padding:18px;border:1px solid #466079;border-radius:12px;margin-top:16px;overflow-wrap:anywhere}.event-example p{margin:8px 0}.event-example summary{cursor:pointer;color:#ebc890;font-weight:700}.example-title{font-weight:750}.spoiler-notice{color:#f0cd94}
 </style></head>
 <body><main><noscript>This schedule needs JavaScript to show local match times. Subscribe directly using <a href="calendar.ics">calendar.ics</a>. / Włącz JavaScript, aby zobaczyć godziny lokalne.</noscript><header><div class="mark">WORLDS / 2026</div><div class="language"><button id="en" aria-pressed="true">EN</button><button id="pl" aria-pressed="false">PL</button></div></header>
 <h1 id="headline">Every match.<br><em>One calendar.</em></h1>
 <p class="hero-credit">Created by <a href="https://marsellewoczko.com" target="_blank" rel="noopener">Marsel Lewoczko ↗</a></p>
 <p class="lead" id="lead">Subscribe once to the League of Legends World Championship 2026 schedule. Match times and teams update automatically.</p>
 <section><h2 id="subscribeTitle">Subscribe to Worlds 2026</h2><div class="buttons"><a class="button" id="apple" href="calendar.ics">Apple Calendar / Outlook ↗</a><button class="button secondary" id="copy" aria-live="polite">Copy subscription link</button><a class="button google" href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank" rel="noopener">Google Calendar ↗</a></div><p class="small" id="guide">Google Calendar: copy the link and add it under Other calendars → From URL. Do not import the file once — subscribe to receive updates. Calendar apps decide how frequently to refresh.</p><p class="small"><code id="feed"></code></p><div class="stat"><div><span id="matchesLabel">Matches</span>: <strong id="count">—</strong></div><div><span id="timezoneLabel">Timezone</span>: <strong id="tz">—</strong></div></div></section>
+<section aria-labelledby="insideTitle">
+<h2 id="insideTitle">What appears in your calendar?</h2>
+<p class="small" id="insideGuide">The event title shows the teams and series format. Times appear in your calendar’s timezone; end times are estimates.</p>
+<p class="small spoiler-notice" id="spoilerNotice">Spoilers in event notes: open a match to see its final score or the last synced Live score. Some calendar apps may preview the notes.</p>
+<div class="event-example">
+<p class="eyebrow" id="exampleLabel">Illustration only — not a scheduled match</p>
+<p class="example-title" id="exampleTitle">Team A vs Team B | Worlds 2026 (Bo3)</p>
+<p class="small" id="exampleWhere">Calendar grid: teams and time, with no score in the title.</p>
+<details><summary id="exampleOpen">Open sample event notes (contains an illustrative score)</summary>
+<p id="exampleResult">Final result: Team A 2–1 Team B</p>
+<p class="small" id="exampleDetails">Then: tournament stage and estimated end time. Live matches show the score’s last fetch time in UTC, not real-time updates.</p>
+<p class="small">Created by <a href="https://marsellewoczko.com">Marsel Lewoczko</a></p>
+</details></div>
+<p class="small" id="refreshNotice">The feed is scheduled to update about every 30 minutes. Your calendar app controls when it fetches changes, so scores and times may arrive later.</p>
+</section>
 <section><div class="eyebrow" id="scheduleLabel">World Championship</div><h2 id="scheduleTitle">Match schedule</h2><p class="small" id="updated">Feed last generated: %%UPDATED%%</p><div id="schedule"></div></section>
 <footer><div class="credit"><span id="credit">Created by</span> <a href="https://marsellewoczko.com" target="_blank" rel="noopener"><strong>Marsel Lewoczko ↗</strong></a></div><p id="portfolio">Explore my other projects at marsellewoczko.com.</p><p id="disclaimer">Independent fan-made project. Not affiliated with or endorsed by Riot Games. Match information is sourced from the LoL Esports schedule; times can change. Match end times in the calendar are estimates.</p><a href="https://lolesports.com/en-US" target="_blank" rel="noopener">LoL Esports ↗</a></footer></main>
 <script type="application/json" id="data">%%EVENTS%%</script>
@@ -25,6 +41,17 @@ document.getElementById('tz').textContent=Intl.DateTimeFormat().resolvedOptions(
 document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(feed);document.getElementById('copy').textContent=lang==='pl'?'Skopiowano ✓':'Copied ✓'}catch{prompt(lang==='pl'?'Skopiuj adres URL:':'Copy URL:',feed)}});
 const strings={
 en: {
+  insideTitle:"What appears in your calendar?",
+  insideGuide:"The event title shows the teams and series format. Times appear in your calendar’s timezone; end times are estimates.",
+  spoilerNotice:"Spoilers in event notes: open a match to see its final score or the last synced Live score. Some calendar apps may preview the notes.",
+  exampleLabel:"Illustration only — not a scheduled match",
+  exampleTitle:"Team A vs Team B | Worlds 2026 (Bo3)",
+  exampleWhere:"Calendar grid: teams and time, with no score in the title.",
+  exampleOpen:"Open sample event notes (contains an illustrative score)",
+  exampleResult:"Final result: Team A 2–1 Team B",
+  exampleDetails:"Then: tournament stage and estimated end time. Live matches show the score’s last fetch time in UTC, not real-time updates.",
+  refreshNotice:"The feed is scheduled to update about every 30 minutes. Your calendar app controls when it fetches changes, so scores and times may arrive later.",
+
   headline:'Every match.<br><em>One calendar.</em>',
   lead:'Subscribe once to the League of Legends World Championship 2026 schedule. Match times and teams update automatically.',
   subscribeTitle:'Add Worlds 2026 calendar',
@@ -41,6 +68,17 @@ en: {
   updated:'Feed last generated: %%UPDATED%%'
 },
 pl: {
+  insideTitle:"Co zobaczysz w swoim kalendarzu?",
+  insideGuide:"Tytuł wydarzenia zawiera drużyny i format serii. Godziny wyświetlają się w strefie Twojego kalendarza; czas zakończenia jest szacunkowy.",
+  spoilerNotice:"Spoilery w notatkach: po otwarciu meczu zobaczysz wynik końcowy albo Live z ostatniej synchronizacji. Niektóre aplikacje mogą pokazywać podgląd notatki.",
+  exampleLabel:"Przykład poglądowy — to nie jest mecz z terminarza",
+  exampleTitle:"Drużyna A vs Drużyna B | Worlds 2026 (Bo3)",
+  exampleWhere:"Widok kalendarza: drużyny i godzina, bez wyniku w tytule.",
+  exampleOpen:"Otwórz przykładową notatkę (zawiera poglądowy wynik)",
+  exampleResult:"Wynik końcowy: Drużyna A 2–1 Drużyna B",
+  exampleDetails:"Dalej: etap turnieju i informacja o szacunkowym końcu. Mecze Live mają godzinę ostatniego pobrania wyniku w UTC — to nie są aktualizacje na żywo.",
+  refreshNotice:"Źródłowy kalendarz aktualizuje się według harmonogramu co około 30 minut. Twoja aplikacja decyduje, kiedy pobierze zmiany, więc wyniki i godziny mogą dotrzeć później.",
+
   headline:'Wszystkie mecze.<br><em>Jeden kalendarz.</em>',
   lead:'Dodaj terminarz Mistrzostw Świata League of Legends 2026. Godziny i zespoły spotkań aktualizują się automatycznie.',
   subscribeTitle:'Dodaj kalendarz Worldsów 2026',

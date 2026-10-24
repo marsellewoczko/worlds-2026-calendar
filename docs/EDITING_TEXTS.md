@@ -28,3 +28,5 @@ Tytuł karty przeglądarki zmienisz na początku pliku w `<title>`. Opisy dla wy
 Teksty statusów meczów (`Zakończony`, `Na żywo` itd.) są w obiekcie `states` wewnątrz funkcji `render`. Komunikaty po skopiowaniu linku i awaryjne okno kopiowania są w obsłudze przycisku `copy` nad `strings`.
 
 Nie edytuj generowanego `site/index.html` — kolejne wdrożenie go zastąpi. Nazwy drużyn, daty i wyniki pochodzą z API. Notatki kalendarza ICS są generowane osobno w funkcji `make_ics` w `sync.py`; nie zmieniają się przez edycję `strings`.
+
+Sekcja „Co zobaczysz w swoim kalendarzu?” korzysta z kluczy `insideTitle`, `insideGuide`, `spoilerNotice`, `exampleLabel`, `exampleTitle`, `exampleWhere`, `exampleOpen`, `exampleResult`, `exampleDetails` i `refreshNotice` w obu wersjach `strings`. Przykład musi pozostać wyraźnie oznaczony jako poglądowy.

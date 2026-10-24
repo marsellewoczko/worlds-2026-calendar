@@ -84,3 +84,9 @@
 - Chromium confirms correct credit/link fully within the initial viewport at 390×844 and 1280×900. Existing PL/EN, timezones, clipboard and blocked-storage smoke checks pass. Publication pending.
 
 - Publication succeeded in run [40118790938](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40118790938); public HTML confirms the hero credit is present.
+
+## 2026-10-24 — Explain calendar contents and score notes
+
+- Added a PL/EN explanation before the schedule: title/teams/format, local times, estimated endings, scores in notes, Live observation timestamps and provider refresh delays.
+- Added a clearly labeled illustrative event outside the actual schedule/feed. Its sample score is collapsed until the visitor opens the example notes. Warned that calendar apps may preview notes.
+- Real Chromium smoke checks passed; PL/EN illustration labeling, initially collapsed sample score and mobile layout verified. Publication pending.
