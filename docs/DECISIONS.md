@@ -21,3 +21,7 @@ Render all output before replacing files and use temporary files plus atomic rep
 Test pull requests and pushes independently of production credentials. Trigger deployment on relevant main-branch code changes, manual requests and the existing 30-minute schedule. Exclude snapshot-only commits from the push trigger to avoid recursion. Keep deployment serialized; never force-push after a state-commit conflict.
 
 Calendar apps decide refresh frequency. Generated subscription URLs and ICS semantics are browser/unit tested; actual Google, Apple and Outlook account subscriptions remain a manual acceptance check. Do not claim these clients or public deployment have been verified without evidence.
+
+## 2026-10-24 — Spoiler-free titles, scores in notes
+
+Keep event titles and visible website rows free of scores. Put explicit series game wins only in ICS DESCRIPTION, so opening match details reveals the result. Use bilingual labels because one shared calendar feed serves both languages. Live scores show an observation timestamp and are explicitly snapshots from the scheduled sync, not real-time scoring. Refreshing that timestamp deliberately increments SEQUENCE; final results do not change on every poll. Never interpret absent result fields as zero.

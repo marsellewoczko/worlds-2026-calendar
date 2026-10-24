@@ -3,9 +3,11 @@
 ## Verified
 
 - Python 3.12 standard-library synchronization; live Worlds API returned 46 current-season matches.
-- Stable IDs, sequence updates, explicit cancellations, UTC offsets, escaped/folded ICS, preserved prior records and failure-safe output generation: 17 tests pass.
+- Stable IDs, sequence updates, explicit cancellations, UTC offsets, escaped/folded ICS, preserved prior records and failure-safe output generation: 26 tests pass.
 - Real Chromium: PL/EN, mobile/desktop, Warsaw/New York local times, clipboard, subscription URLs and disabled browser storage pass.
 - Local page and ICS generated from live source. The generated site is ignored; data/events.json is the durable real-source snapshot.
+
+- Score-note change validated locally: 14 real final scores appear only in ICS descriptions; Live snapshots include a fetch timestamp. Production verification is pending for this new change.
 
 ## Deployment and limits
 

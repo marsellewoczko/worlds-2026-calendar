@@ -155,7 +155,7 @@ def normalized(event):
         bo = 1
     if bo not in (1, 3, 5):
         bo = 1
-    return {
+    item = {
         "id": mid,
         "start": start.isoformat().replace("+00:00", "Z"),
         "team1": team_name(teams[0]),
@@ -164,6 +164,19 @@ def normalized(event):
         "best_of": bo,
         "state": str(event.get("state") or "unstarted"),
     }
+    # Only explicit API game wins count as a score. Missing values are not 0–0.
+    if item["state"] in ("inProgress", "completed"):
+        scores = [
+            team.get("result", {}).get("gameWins")
+            if isinstance(team, dict) and isinstance(team.get("result"), dict) else None
+            for team in teams
+        ]
+        target = bo // 2 + 1
+        valid = all(type(score) is int and 0 <= score <= target for score in scores)
+        if valid and (item["state"] != "completed" or
+                      (max(scores) == target and min(scores) < target)):
+            item["score"] = scores
+    return item
 
 
 def merge(previous, events, current):
@@ -176,6 +189,15 @@ def merge(previous, events, current):
             continue
         accepted += 1
         prior = result.get(item["id"])
+        # A temporary missing result must not erase a previously verified score
+        # for the same participants and match state, or claim it was rechecked.
+        if ("score" not in item and prior and "score" in prior and
+                all(item[key] == prior.get(key) for key in ("team1", "team2", "state"))):
+            item["score"] = prior["score"]
+            if "score_checked_at" in prior:
+                item["score_checked_at"] = prior["score_checked_at"]
+        elif "score" in item and item["state"] == "inProgress":
+            item["score_checked_at"] = current.isoformat().replace("+00:00", "Z")
         old_data = {k: v for k, v in (prior or {}).items() if k not in ("sequence", "last_modified")}
         if item == old_data:
             continue
@@ -233,6 +255,16 @@ def make_ics(state):
                   'End time is an estimate.\n'
                   'Created by Marsel Lewoczko — https://marsellewoczko.com\n'
                   'Schedule source: https://lolesports.com/en-US')
+        if "score" in event:
+            score = f'{event["team1"]} {event["score"][0]}–{event["score"][1]} {event["team2"]}'
+            if event["state"] == "completed":
+                detail += f'\n\nWynik końcowy / Final result: {score}'
+            elif event["state"] == "inProgress" and event.get("score_checked_at"):
+                checked = parse_time(event["score_checked_at"]).strftime("%Y-%m-%d %H:%M UTC")
+                detail += (f'\n\nLive: {score}\n'
+                           f'Ostatnie pobranie / Last fetched: {checked}.\n'
+                           'Wynik z ostatniej synchronizacji, nie w czasie rzeczywistym. / '
+                           'Score from the last sync, not a real-time feed.')
         canceled = event["state"].lower() in ("cancelled", "canceled")
         lines.extend([
             "BEGIN:VEVENT",

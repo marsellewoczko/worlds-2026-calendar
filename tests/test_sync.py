@@ -142,3 +142,91 @@ class ReliabilityTests(TestCase):
                     sync.atomic_write(target, b'new')
             self.assertEqual(target.read_bytes(), b'old')
             self.assertEqual(list(Path(directory).iterdir()), [target])
+
+class ScoreNotesTests(TestCase):
+    def setUp(self):
+        self.now = datetime(2026, 10, 24, 12, 0, tzinfo=timezone.utc)
+
+    def scored(self, state='completed', scores=(3, 2)):
+        event = fixture(name='T1')
+        event['state'] = state
+        event['match']['strategy']['count'] = 5
+        for team, score in zip(event['match']['teams'], scores):
+            team['result'] = {'gameWins': score}
+        return event
+
+    def unfolded(self, state):
+        return sync.make_ics(state).replace('\r\n ', '')
+
+    def test_final_score_is_in_description_only(self):
+        state, _ = sync.merge({}, [self.scored()], self.now)
+        text = self.unfolded(state)
+        summary = next(row for row in text.split('\r\n') if row.startswith('SUMMARY:'))
+        self.assertEqual(summary, 'SUMMARY:T1 vs G2 | Worlds 2026 (Bo5)')
+        self.assertIn('Wynik końcowy / Final result: T1 3–2 G2', text)
+        self.assertNotIn('Live:', text)
+
+    def test_live_score_has_observation_timestamp(self):
+        state, _ = sync.merge({}, [self.scored('inProgress', (1, 2))], self.now)
+        text = self.unfolded(state)
+        self.assertIn('Live: T1 1–2 G2', text)
+        self.assertIn('Last fetched: 2026-10-24 12:00 UTC', text)
+        self.assertIn('not a real-time feed', text)
+        self.assertNotIn('Final result:', text)
+
+    def test_live_refresh_and_final_update_keep_same_uid(self):
+        first, _ = sync.merge({}, [self.scored('inProgress', (1, 2))], self.now)
+        later = datetime(2026, 10, 24, 12, 30, tzinfo=timezone.utc)
+        refreshed, _ = sync.merge(first, [self.scored('inProgress', (1, 2))], later)
+        final, _ = sync.merge(refreshed, [self.scored()], later)
+        self.assertEqual(refreshed['11']['sequence'], 1)
+        self.assertEqual(final['11']['sequence'], 2)
+        self.assertIn('Last fetched: 2026-10-24 12:30 UTC', self.unfolded(refreshed))
+        self.assertNotIn('score_checked_at', final['11'])
+        for state in (first, refreshed, final):
+            self.assertIn('UID:worlds2026-riot-11@marsellewoczko.com', self.unfolded(state))
+
+    def test_final_score_is_stable_and_corrections_increment_sequence(self):
+        first, _ = sync.merge({}, [self.scored()], self.now)
+        same, count = sync.merge(first, [self.scored()], datetime(2026, 10, 25, tzinfo=timezone.utc))
+        self.assertEqual(same, first)
+        self.assertEqual(count, 0)
+        corrected, _ = sync.merge(same, [self.scored(scores=(2, 3))], self.now)
+        self.assertEqual(corrected['11']['sequence'], 1)
+        self.assertIn('Final result: T1 2–3 G2', self.unfolded(corrected))
+
+    def test_unstarted_and_missing_results_do_not_invent_scores(self):
+        event = self.scored('unstarted', (0, 0))
+        self.assertNotIn('score', sync.normalized(event))
+        for team in event['match']['teams']:
+            team.pop('result')
+        for state in ('inProgress', 'completed'):
+            event['state'] = state
+            normalized = sync.normalized(event)
+            self.assertNotIn('score', normalized)
+
+    def test_invalid_and_incomplete_final_scores_are_omitted(self):
+        for scores in ((None, 1), ('3', 1), (True, 1), (-1, 3), (4, 1), (0, 0), (2, 1), (3, 3)):
+            with self.subTest(scores=scores):
+                self.assertNotIn('score', sync.normalized(self.scored(scores=scores)))
+
+    def test_explicit_live_zero_zero_is_valid(self):
+        self.assertEqual(sync.normalized(self.scored('inProgress', (0, 0)))['score'], [0, 0])
+
+    def test_temporarily_missing_results_keep_score_without_fresh_timestamp(self):
+        first, _ = sync.merge({}, [self.scored('inProgress', (1, 2))], self.now)
+        event = self.scored('inProgress')
+        for team in event['match']['teams']:
+            team.pop('result')
+        later, count = sync.merge(first, [event], datetime(2026, 10, 24, 12, 30, tzinfo=timezone.utc))
+        self.assertEqual(later, first)
+        self.assertEqual(count, 0)
+        self.assertIn('Last fetched: 2026-10-24 12:00 UTC', self.unfolded(later))
+
+    def test_old_live_score_is_not_presented_as_final_when_final_result_missing(self):
+        first, _ = sync.merge({}, [self.scored('inProgress', (1, 2))], self.now)
+        event = self.scored()
+        event['match']['teams'][0].pop('result')
+        final, _ = sync.merge(first, [event], self.now)
+        self.assertNotIn('score', final['11'])
+        self.assertNotIn('Final result:', self.unfolded(final))

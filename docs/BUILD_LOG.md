@@ -42,3 +42,11 @@
 - Public page https://marsellewoczko.github.io/worlds-2026-calendar/ and calendar.ics both returned HTTP 200. Parsed embedded HTML events and public ICS: the same 46 identities, 46 unique UIDs, resolved template, author credit and valid 75-octet line folding.
 - Fetched and fast-forwarded the local checkout to retain automatic upstream schedule updates before documentation changes. No application code changed in this verification session.
 - Previous Pages activation and waiting blockers are resolved. Actual Google/Apple/Outlook account subscriptions remain untested; this check proves public availability and successful scheduled deployment, not client refresh behavior.
+
+## 2026-10-24 — Scores inside calendar notes
+
+- Added explicit API gameWins extraction for completed/inProgress matches. Completed matches require a valid series-winning score. Missing, malformed or unstarted results do not become invented scores.
+- ICS DESCRIPTION now includes bilingual final-result labels or Live with the last successful observation time (UTC) and a last-sync disclaimer. SUMMARY remains unchanged and contains no score; the schedule interface does not display scores.
+- Live observations update timestamp and SEQUENCE so subscribers can see when the score was fetched. Final results remain stable until corrected. Missing results for unchanged teams/state retain the previous verified score and timestamp; a missing final result is never inferred from a prior live score.
+- All 26 unit tests passed, including 9 new score tests. Live local API build produced 46 matches with 14 final-score descriptions and no scores in event summaries. No live matches were available in that source snapshot; live-note behavior is unit tested, not claimed as observed in production.
+- Deployment of this change will be verified separately after pushing; provider refresh remains outside the server's control.
