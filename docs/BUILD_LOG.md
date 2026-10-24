@@ -98,3 +98,5 @@
 - Replaced the text-only illustrative event with the owner-supplied calendar screenshot in the explanation section. The image is behind a labeled spoiler disclosure, scales to mobile widths and has PL/EN alt text.
 - Added image copying to the site build and asset changes to the deployment trigger. Kept the original supplied image unchanged.
 - All 28 tests passed; a live build copied the image. Chromium smoke and screenshot checks passed in PL/EN at mobile/desktop widths, including loaded image dimensions, collapsed initial state and no overflow. Publication pending.
+
+- Publication run 40120568995 succeeded. Public HTML references the screenshot, and the public JPEG returns HTTP 200 (130089 bytes).

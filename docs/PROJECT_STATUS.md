@@ -36,4 +36,4 @@ Explore creator-authorized match recap links. A version without score notes is a
 
 - Calendar-contents guide and collapsible, explicitly illustrative score note added in PL/EN; browser verified and published successfully.
 
-- Explanation now uses the supplied screenshot behind a spoiler disclosure; local build and browser verified, publication pending.
+- Explanation now uses the supplied screenshot behind a spoiler disclosure; local build/browser verified and publicly deployed; JPEG returns HTTP 200.
