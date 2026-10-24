@@ -63,3 +63,9 @@
 
 - [Publish run 40095901623](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40095901623) and CI succeeded. Public ICS returns 200 with no LoL Esports source URL, still includes final scores, preserves all 46 UIDs and increases SEQUENCE for every event. Public page retains the source link. Source cleanup is deployed.
 - Discussed a possible future recap-link feature after creator permission, potentially without score notes to avoid spoilers. No recap integration, contact or score removal has been performed.
+
+## 2026-10-24 — Colorful buttons and simplified subscription heading
+
+- Removed the subscription eyebrow element (Your calendar, always up to date). Preserved owner's latest PL/EN copy.
+- Subscription buttons now use gold, mint and lavender backgrounds with dark text; language buttons are also colored. Added visible keyboard focus outlines.
+- Real Chromium smoke checks passed for mobile/desktop, PL/EN, two timezones, clipboard and disabled storage. Verified the eyebrow is absent and all three subscription button backgrounds differ. Deployment pending.

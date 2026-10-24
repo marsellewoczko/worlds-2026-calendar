@@ -27,3 +27,5 @@ Perform actual URL subscriptions in Google Calendar, Apple Calendar and Outlook,
 ## Possible future enhancement
 
 Explore creator-authorized match recap links. A version without score notes is a proposal for spoiler-free recap viewing, not an implemented change. No creator contact or permission is claimed.
+
+- Latest UI update: colored calendar/language buttons and removed subscription eyebrow; real-browser checks passed, publication pending.
