@@ -100,3 +100,7 @@
 - All 28 tests passed; a live build copied the image. Chromium smoke and screenshot checks passed in PL/EN at mobile/desktop widths, including loaded image dimensions, collapsed initial state and no overflow. Publication pending.
 
 - Publication run 40120568995 succeeded. Public HTML references the screenshot, and the public JPEG returns HTTP 200 (130089 bytes).
+
+## 2026-10-24 — Replacement screenshot
+
+- Replaced the calendar screenshot with the newly supplied original (906×1280). Updated declared dimensions and image URL version so browsers fetch the replacement. Existing spoiler disclosure and captions are unchanged. Publication pending.
