@@ -104,3 +104,5 @@
 ## 2026-10-24 — Replacement screenshot
 
 - Replaced the calendar screenshot with the newly supplied original (906×1280). Updated declared dimensions and image URL version so browsers fetch the replacement. Existing spoiler disclosure and captions are unchanged. Publication pending.
+
+- Replacement screenshot verified in Chromium at 390px/1280px. Publication run 40120806327 succeeded; downloaded public image matches the new upload byte for byte.
