@@ -34,4 +34,4 @@ Explore creator-authorized match recap links. A version without score notes is a
 
 - First-screen author credit added below the hero title; verified in mobile/desktop Chromium and present on the public site after successful publication.
 
-- Calendar-contents guide and collapsible, explicitly illustrative score note added in PL/EN; browser verified, deployment pending.
+- Calendar-contents guide and collapsible, explicitly illustrative score note added in PL/EN; browser verified and published successfully.

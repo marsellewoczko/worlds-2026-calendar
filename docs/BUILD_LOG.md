@@ -90,3 +90,5 @@
 - Added a PL/EN explanation before the schedule: title/teams/format, local times, estimated endings, scores in notes, Live observation timestamps and provider refresh delays.
 - Added a clearly labeled illustrative event outside the actual schedule/feed. Its sample score is collapsed until the visitor opens the example notes. Warned that calendar apps may preview notes.
 - Real Chromium smoke checks passed; PL/EN illustration labeling, initially collapsed sample score and mobile layout verified. Publication pending.
+
+- Publish run 40119461125 succeeded; public HTML confirms the calendar-contents section is present.
