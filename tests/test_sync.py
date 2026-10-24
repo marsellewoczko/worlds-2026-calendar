@@ -243,3 +243,13 @@ class ScoreNotesTests(TestCase):
         same, count = sync.merge(updated, [self.scored()], self.now)
         self.assertEqual(count, 0)
         self.assertEqual(updated, same)
+
+    def test_score_starts_note_and_credit_is_last_after_blank_line(self):
+        for event in (self.scored(), self.scored('inProgress', (1, 2)), fixture()):
+            state, _ = sync.merge({}, [event], self.now)
+            description = next(line for line in self.unfolded(state).split('\r\n') if line.startswith('DESCRIPTION:'))
+            if event.get('state') == 'completed':
+                self.assertTrue(description.startswith('DESCRIPTION:Wynik końcowy / Final result:'))
+            elif event.get('state') == 'inProgress':
+                self.assertTrue(description.startswith('DESCRIPTION:Live:'))
+            self.assertTrue(description.endswith('\\n\\nCreated by Marsel Lewoczko — https://marsellewoczko.com'))

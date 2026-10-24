@@ -3,7 +3,7 @@
 ## Verified
 
 - Python 3.12 standard-library synchronization; live Worlds API returned 46 current-season matches.
-- Stable IDs, sequence updates, explicit cancellations, UTC offsets, escaped/folded ICS, preserved prior records and failure-safe output generation: 27 tests pass.
+- Stable IDs, sequence updates, explicit cancellations, UTC offsets, escaped/folded ICS, preserved prior records and failure-safe output generation: 28 tests pass.
 - Real Chromium: PL/EN, mobile/desktop, Warsaw/New York local times, clipboard, subscription URLs and disabled browser storage pass.
 - Local page and ICS generated from live source. The generated site is ignored; data/events.json is the durable real-source snapshot.
 
@@ -29,3 +29,5 @@ Perform actual URL subscriptions in Google Calendar, Apple Calendar and Outlook,
 Explore creator-authorized match recap links. A version without score notes is a proposal for spoiler-free recap viewing, not an implemented change. No creator contact or permission is claimed.
 
 - Latest UI update: colored calendar/language buttons and removed subscription eyebrow; real-browser checks passed, publication pending.
+
+- Note layout update: score first, author credit last after a blank line; 28 tests passed, deployment pending.

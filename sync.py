@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent
 SITE = ROOT / "site"
 STATE = ROOT / "data" / "events.json"
 # Bump when rendered event text changes, so existing subscriptions update once.
-EVENT_FORMAT_VERSION = 2
+EVENT_FORMAT_VERSION = 3
 BASE = "https://esports-api.lolesports.com/persisted/gw"
 # Key used by the public LoL Esports website, NOT a personal API credential.
 WEB_KEY = "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"
@@ -255,18 +255,18 @@ def make_ics(state):
         end = start + timedelta(hours={1: 1, 3: 3, 5: 5}[event["best_of"]])
         name = f'{event["team1"]} vs {event["team2"]} | Worlds 2026 (Bo{event["best_of"]})'
         detail = (f'{event["stage"]} | Worlds 2026.\n'
-                  'End time is an estimate.\n'
-                  'Created by Marsel Lewoczko — https://marsellewoczko.com')
+                  'End time is an estimate.')
         if "score" in event:
             score = f'{event["team1"]} {event["score"][0]}–{event["score"][1]} {event["team2"]}'
             if event["state"] == "completed":
-                detail += f'\n\nWynik końcowy / Final result: {score}'
+                detail = f'Wynik końcowy / Final result: {score}\n\n' + detail
             elif event["state"] == "inProgress" and event.get("score_checked_at"):
                 checked = parse_time(event["score_checked_at"]).strftime("%Y-%m-%d %H:%M UTC")
-                detail += (f'\n\nLive: {score}\n'
+                detail = (f'Live: {score}\n'
                            f'Ostatnie pobranie / Last fetched: {checked}.\n'
                            'Wynik z ostatniej synchronizacji, nie w czasie rzeczywistym. / '
-                           'Score from the last sync, not a real-time feed.')
+                           'Score from the last sync, not a real-time feed.\n\n') + detail
+        detail += '\n\nCreated by Marsel Lewoczko — https://marsellewoczko.com'
         canceled = event["state"].lower() in ("cancelled", "canceled")
         lines.extend([
             "BEGIN:VEVENT",

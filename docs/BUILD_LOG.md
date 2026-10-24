@@ -69,3 +69,9 @@
 - Removed the subscription eyebrow element (Your calendar, always up to date). Preserved owner's latest PL/EN copy.
 - Subscription buttons now use gold, mint and lavender backgrounds with dark text; language buttons are also colored. Added visible keyboard focus outlines.
 - Real Chromium smoke checks passed for mobile/desktop, PL/EN, two timezones, clipboard and disabled storage. Verified the eyebrow is absent and all three subscription button backgrounds differ. Deployment pending.
+
+## 2026-10-24 — Score first, credit last in calendar notes
+
+- Moved final/live score to the beginning of DESCRIPTION, followed by match details; moved author credit to the last line after a blank line, including events without scores.
+- Bumped event format version to 3 so existing subscriptions receive the reordered note. Titles and UIDs remain unchanged.
+- All 28 tests passed, including description ordering for final, live and unstarted matches. Publication pending together with colored buttons.
