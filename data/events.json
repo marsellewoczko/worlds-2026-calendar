@@ -68,11 +68,11 @@
   "115660540726095017": {
     "best_of": 1,
     "id": "115660540726095017",
-    "last_modified": "2026-10-24T00:43:43Z",
-    "sequence": 1,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 2,
     "stage": "Swiss",
     "start": "2026-10-24T00:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "LYON",
     "team2": "TSW"
   },
@@ -90,90 +90,90 @@
   "115660540726095021": {
     "best_of": 1,
     "id": "115660540726095021",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 1,
     "stage": "Swiss",
-    "start": "2026-10-24T17:00:00Z",
+    "start": "2026-10-24T18:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "CFO",
+    "team2": "MKOI"
   },
   "115660540726095023": {
     "best_of": 1,
     "id": "115660540726095023",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 1,
     "stage": "Swiss",
-    "start": "2026-10-24T18:00:00Z",
+    "start": "2026-10-24T20:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "LYON",
+    "team2": "KC"
   },
   "115660540726095025": {
     "best_of": 1,
     "id": "115660540726095025",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 1,
     "stage": "Swiss",
-    "start": "2026-10-24T19:00:00Z",
+    "start": "2026-10-24T22:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "GEN",
+    "team2": "HLE"
   },
   "115660540726095027": {
     "best_of": 1,
     "id": "115660540726095027",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 1,
     "stage": "Swiss",
-    "start": "2026-10-24T20:00:00Z",
+    "start": "2026-10-24T23:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "T1",
+    "team2": "DK"
   },
   "115660540726095029": {
     "best_of": 1,
     "id": "115660540726095029",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 1,
     "stage": "Swiss",
-    "start": "2026-10-24T21:00:00Z",
+    "start": "2026-10-24T17:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "AL",
+    "team2": "TES"
   },
   "115660540726095031": {
     "best_of": 1,
     "id": "115660540726095031",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 1,
     "stage": "Swiss",
-    "start": "2026-10-24T22:00:00Z",
+    "start": "2026-10-24T19:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "G2",
+    "team2": "LOS"
   },
   "115660540726095033": {
     "best_of": 1,
     "id": "115660540726095033",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 1,
     "stage": "Swiss",
-    "start": "2026-10-24T23:00:00Z",
+    "start": "2026-10-24T21:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "TSW",
+    "team2": "IG"
   },
   "115660540726095035": {
     "best_of": 1,
     "id": "115660540726095035",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T01:39:23Z",
+    "sequence": 1,
     "stage": "Swiss",
     "start": "2026-10-25T00:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "TLAW",
+    "team2": "BLG"
   },
   "115660540726095037": {
     "best_of": 3,
