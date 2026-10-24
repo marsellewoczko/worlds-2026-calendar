@@ -75,3 +75,5 @@
 - Moved final/live score to the beginning of DESCRIPTION, followed by match details; moved author credit to the last line after a blank line, including events without scores.
 - Bumped event format version to 3 so existing subscriptions receive the reordered note. Titles and UIDs remain unchanged.
 - All 28 tests passed, including description ordering for final, live and unstarted matches. Publication pending together with colored buttons.
+
+- Both updates published successfully in run [40118658048](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40118658048). Public HTML confirms colored button CSS and absent eyebrow; public ICS confirms 15 final/live score notes at the beginning and every author credit last after a blank line.

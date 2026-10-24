@@ -28,6 +28,6 @@ Perform actual URL subscriptions in Google Calendar, Apple Calendar and Outlook,
 
 Explore creator-authorized match recap links. A version without score notes is a proposal for spoiler-free recap viewing, not an implemented change. No creator contact or permission is claimed.
 
-- Latest UI update: colored calendar/language buttons and removed subscription eyebrow; real-browser checks passed, publication pending.
+- Latest UI update: colored calendar/language buttons and removed subscription eyebrow; real-browser checks passed; public deployment verified.
 
-- Note layout update: score first, author credit last after a blank line; 28 tests passed, deployment pending.
+- Note layout update: score first, author credit last after a blank line; 28 tests passed; public ICS ordering verified after successful deployment.
