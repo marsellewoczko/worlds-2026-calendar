@@ -9,7 +9,7 @@
 
 - Score-note change is deployed and publicly verified: 14 real final scores appear only in ICS descriptions; all 46 UIDs and titles are preserved. Updated result events have increased SEQUENCE values. Live snapshots include a fetch timestamp (unit tested; no in-progress matches in the inspected source snapshot).
 
-- Source removal from calendar notes is validated locally and awaiting deployment; attribution remains on the website. Text editing instructions: [EDITING_TEXTS.md](EDITING_TEXTS.md).
+- Source removal from calendar notes is deployed and publicly verified: all 46 UIDs preserved, SEQUENCE increased for all events, scores retained, source attribution remains on the website. Text editing instructions: [EDITING_TEXTS.md](EDITING_TEXTS.md).
 
 ## Deployment and limits
 
@@ -23,3 +23,7 @@
 ## Next step
 
 Perform actual URL subscriptions in Google Calendar, Apple Calendar and Outlook, then verify provider refresh after a genuine source update. Keep monitoring the unofficial API and scheduled sync; do not assume provider refresh is immediate.
+
+## Possible future enhancement
+
+Explore creator-authorized match recap links. A version without score notes is a proposal for spoiler-free recap viewing, not an implemented change. No creator contact or permission is claimed.

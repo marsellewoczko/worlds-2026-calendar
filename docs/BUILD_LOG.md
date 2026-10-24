@@ -60,3 +60,6 @@
 - Added an event format version so this text change increments existing event SEQUENCE once with stable UIDs; otherwise unchanged completed events could keep their old notes in calendar clients. A migration test verifies the update happens only once.
 - Reformatted PL/EN translation entries to one field per line without changing copy, and added docs/EDITING_TEXTS.md with the GitHub editing workflow, field map, metadata locations and deployment steps.
 - All 27 unit tests passed; Node syntax check passed for the website script. A live local build retains scores, removes the source URL from ICS and retains the source link on the website. Remote deployment verification pending.
+
+- [Publish run 40095901623](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40095901623) and CI succeeded. Public ICS returns 200 with no LoL Esports source URL, still includes final scores, preserves all 46 UIDs and increases SEQUENCE for every event. Public page retains the source link. Source cleanup is deployed.
+- Discussed a possible future recap-link feature after creator permission, potentially without score notes to avoid spoilers. No recap integration, contact or score removal has been performed.
