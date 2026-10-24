@@ -179,13 +179,13 @@
     "best_of": 1,
     "format_version": 2,
     "id": "115660540726095029",
-    "last_modified": "2026-10-24T17:24:44Z",
+    "last_modified": "2026-10-24T17:55:31Z",
     "score": [
-      0,
+      1,
       0
     ],
-    "score_checked_at": "2026-10-24T17:24:44Z",
-    "sequence": 3,
+    "score_checked_at": "2026-10-24T17:55:31Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-24T17:00:00Z",
     "state": "inProgress",
