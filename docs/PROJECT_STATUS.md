@@ -31,3 +31,5 @@ Explore creator-authorized match recap links. A version without score notes is a
 - Latest UI update: colored calendar/language buttons and removed subscription eyebrow; real-browser checks passed; public deployment verified.
 
 - Note layout update: score first, author credit last after a blank line; 28 tests passed; public ICS ordering verified after successful deployment.
+
+- First-screen author credit added below the hero title; verified in mobile/desktop Chromium, publication pending.

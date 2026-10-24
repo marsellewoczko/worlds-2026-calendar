@@ -77,3 +77,8 @@
 - All 28 tests passed, including description ordering for final, live and unstarted matches. Publication pending together with colored buttons.
 
 - Both updates published successfully in run [40118658048](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40118658048). Public HTML confirms colored button CSS and absent eyebrow; public ICS confirms 15 final/live score notes at the beginning and every author credit last after a blank line.
+
+## 2026-10-24 — Author credit in the first screen
+
+- Added Created by Marsel Lewoczko under the hero heading with a link to https://marsellewoczko.com. Existing footer credit remains.
+- Chromium confirms correct credit/link fully within the initial viewport at 390×844 and 1280×900. Existing PL/EN, timezones, clipboard and blocked-storage smoke checks pass. Publication pending.
