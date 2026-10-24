@@ -82,3 +82,5 @@
 
 - Added Created by Marsel Lewoczko under the hero heading with a link to https://marsellewoczko.com. Existing footer credit remains.
 - Chromium confirms correct credit/link fully within the initial viewport at 390×844 and 1280×900. Existing PL/EN, timezones, clipboard and blocked-storage smoke checks pass. Publication pending.
+
+- Publication succeeded in run [40118790938](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40118790938); public HTML confirms the hero credit is present.

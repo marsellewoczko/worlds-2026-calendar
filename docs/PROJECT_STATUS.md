@@ -32,4 +32,4 @@ Explore creator-authorized match recap links. A version without score notes is a
 
 - Note layout update: score first, author credit last after a blank line; 28 tests passed; public ICS ordering verified after successful deployment.
 
-- First-screen author credit added below the hero title; verified in mobile/desktop Chromium, publication pending.
+- First-screen author credit added below the hero title; verified in mobile/desktop Chromium and present on the public site after successful publication.
