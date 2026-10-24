@@ -25,3 +25,7 @@ Calendar apps decide refresh frequency. Generated subscription URLs and ICS sema
 ## 2026-10-24 — Spoiler-free titles, scores in notes
 
 Keep event titles and visible website rows free of scores. Put explicit series game wins only in ICS DESCRIPTION, so opening match details reveals the result. Use bilingual labels because one shared calendar feed serves both languages. Live scores show an observation timestamp and are explicitly snapshots from the scheduled sync, not real-time scoring. Refreshing that timestamp deliberately increments SEQUENCE; final results do not change on every poll. Never interpret absent result fields as zero.
+
+## 2026-10-24 — Source attribution and event text revisions
+
+Per owner request, retain LoL Esports attribution/link on the website and remove it from calendar notes and the ICS URL property. Add a persisted event format version to trigger exactly one SEQUENCE increment for an event text format change; keep UIDs unchanged. Future rendered event changes should bump this version so existing subscribers can receive them even when source match data is unchanged.

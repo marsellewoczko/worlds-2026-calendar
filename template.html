@@ -23,8 +23,40 @@ document.getElementById('count').textContent=events.length;
 document.getElementById('tz').textContent=Intl.DateTimeFormat().resolvedOptions().timeZone||'Local';
 document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(feed);document.getElementById('copy').textContent=lang==='pl'?'Skopiowano ✓':'Copied ✓'}catch{prompt(lang==='pl'?'Skopiuj adres URL:':'Copy URL:',feed)}});
 const strings={
-en:{headline:'Every match.<br><em>One calendar.</em>',lead:'Subscribe once to the League of Legends World Championship 2026 schedule. Match times and teams update automatically.',eyebrow:'Your calendar, always up to date',subscribeTitle:'Subscribe to Worlds 2026',apple:'Apple Calendar / Outlook ↗',copy:'Copy subscription link',guide:'Google Calendar: copy the link and add it under Other calendars → From URL. Do not import the file once — subscribe to receive updates. Calendar apps decide how frequently to refresh.',matchesLabel:'Matches',timezoneLabel:'Timezone',scheduleLabel:'World Championship',scheduleTitle:'Match schedule',credit:'Created by',portfolio:'Explore my other projects at marsellewoczko.com.',disclaimer:'Independent fan-made project. Not affiliated with or endorsed by Riot Games. Match information is sourced from the LoL Esports schedule; times can change. Match end times in the calendar are estimates.',updated:'Feed last generated: %%UPDATED%%'},
-pl:{headline:'Każdy mecz.<br><em>Jeden kalendarz.</em>',lead:'Dodaj terminarz Mistrzostw Świata League of Legends 2026. Godziny i uczestnicy spotkań aktualizują się automatycznie.',eyebrow:'Twój kalendarz, zawsze aktualny',subscribeTitle:'Subskrybuj Worlds 2026',apple:'Kalendarz Apple / Outlook ↗',copy:'Kopiuj link subskrypcji',guide:'Google Calendar: skopiuj link i dodaj go przez Inne kalendarze → Z adresu URL. Nie importuj pliku jednorazowo — subskrypcja pozwala otrzymywać aktualizacje. Częstotliwość odświeżania zależy od aplikacji.',matchesLabel:'Mecze',timezoneLabel:'Strefa czasowa',scheduleLabel:'Mistrzostwa Świata',scheduleTitle:'Terminarz meczów',credit:'Created by',portfolio:'Poznaj moje pozostałe projekty na marsellewoczko.com.',disclaimer:'Niezależny projekt fanowski, niepowiązany z Riot Games. Terminy pochodzą z kalendarza LoL Esports i mogą się zmieniać. Godziny zakończenia meczów są szacunkowe.',updated:'Ostatnie wygenerowanie: %%UPDATED%%'}};
+en: {
+  headline:'Every match.<br><em>One calendar.</em>',
+  lead:'Subscribe once to the League of Legends World Championship 2026 schedule. Match times and teams update automatically.',
+  eyebrow:'Your calendar, always up to date',
+  subscribeTitle:'Subscribe to Worlds 2026',
+  apple:'Apple Calendar / Outlook ↗',
+  copy:'Copy subscription link',
+  guide:'Google Calendar: copy the link and add it under Other calendars → From URL. Do not import the file once — subscribe to receive updates. Calendar apps decide how frequently to refresh.',
+  matchesLabel:'Matches',
+  timezoneLabel:'Timezone',
+  scheduleLabel:'World Championship',
+  scheduleTitle:'Match schedule',
+  credit:'Created by',
+  portfolio:'Explore my other projects at marsellewoczko.com.',
+  disclaimer:'Independent fan-made project. Not affiliated with or endorsed by Riot Games. Match information is sourced from the LoL Esports schedule; times can change. Match end times in the calendar are estimates.',
+  updated:'Feed last generated: %%UPDATED%%'
+},
+pl: {
+  headline:'Każdy mecz.<br><em>Jeden kalendarz.</em>',
+  lead:'Dodaj terminarz Mistrzostw Świata League of Legends 2026. Godziny i uczestnicy spotkań aktualizują się automatycznie.',
+  eyebrow:'Twój kalendarz, zawsze aktualny',
+  subscribeTitle:'Subskrybuj Worlds 2026',
+  apple:'Kalendarz Apple / Outlook ↗',
+  copy:'Kopiuj link subskrypcji',
+  guide:'Google Calendar: skopiuj link i dodaj go przez Inne kalendarze → Z adresu URL. Nie importuj pliku jednorazowo — subskrypcja pozwala otrzymywać aktualizacje. Częstotliwość odświeżania zależy od aplikacji.',
+  matchesLabel:'Mecze',
+  timezoneLabel:'Strefa czasowa',
+  scheduleLabel:'Mistrzostwa Świata',
+  scheduleTitle:'Terminarz meczów',
+  credit:'Created by',
+  portfolio:'Poznaj moje pozostałe projekty na marsellewoczko.com.',
+  disclaimer:'Niezależny projekt fanowski, niepowiązany z Riot Games. Terminy pochodzą z kalendarza LoL Esports i mogą się zmieniać. Godziny zakończenia meczów są szacunkowe.',
+  updated:'Ostatnie wygenerowanie: %%UPDATED%%'
+}};
 let savedLang;
 try{savedLang=localStorage.getItem('worldsCalendarLang')}catch{}
 let lang=['en','pl'].includes(savedLang)?savedLang:((navigator.language||'').startsWith('pl')?'pl':'en');

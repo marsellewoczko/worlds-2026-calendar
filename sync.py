@@ -17,6 +17,8 @@ import argparse
 ROOT = Path(__file__).resolve().parent
 SITE = ROOT / "site"
 STATE = ROOT / "data" / "events.json"
+# Bump when rendered event text changes, so existing subscriptions update once.
+EVENT_FORMAT_VERSION = 2
 BASE = "https://esports-api.lolesports.com/persisted/gw"
 # Key used by the public LoL Esports website, NOT a personal API credential.
 WEB_KEY = "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"
@@ -163,6 +165,7 @@ def normalized(event):
         "stage": str(event.get("blockName") or "Worlds 2026")[:120],
         "best_of": bo,
         "state": str(event.get("state") or "unstarted"),
+        "format_version": EVENT_FORMAT_VERSION,
     }
     # Only explicit API game wins count as a score. Missing values are not 0–0.
     if item["state"] in ("inProgress", "completed"):
@@ -253,8 +256,7 @@ def make_ics(state):
         name = f'{event["team1"]} vs {event["team2"]} | Worlds 2026 (Bo{event["best_of"]})'
         detail = (f'{event["stage"]} | Worlds 2026.\n'
                   'End time is an estimate.\n'
-                  'Created by Marsel Lewoczko — https://marsellewoczko.com\n'
-                  'Schedule source: https://lolesports.com/en-US')
+                  'Created by Marsel Lewoczko — https://marsellewoczko.com')
         if "score" in event:
             score = f'{event["team1"]} {event["score"][0]}–{event["score"][1]} {event["team2"]}'
             if event["state"] == "completed":
@@ -276,7 +278,6 @@ def make_ics(state):
             f'DTEND:{end.strftime("%Y%m%dT%H%M%SZ")}',
             "SUMMARY:" + ical_escape(name),
             "DESCRIPTION:" + ical_escape(detail),
-            "URL:https://lolesports.com/en-US",
             "STATUS:CANCELLED" if canceled else "STATUS:CONFIRMED",
             "TRANSP:TRANSPARENT",
             "END:VEVENT",

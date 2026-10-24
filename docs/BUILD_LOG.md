@@ -53,3 +53,10 @@
 
 - Score-note implementation committed as [d5e5272](https://github.com/marsellewoczko/worlds-2026-calendar/commit/d5e527249224f73647683758b014fcd7f82f6307). [CI 40093593704](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40093593704) and [publish run 40093593688](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40093593688) succeeded. This push regenerated and published the feed immediately, without waiting for the scheduled run.
 - Compared public ICS fetched before and after publication: all 46 UIDs and titles unchanged; 14 final-result descriptions added with increased event SEQUENCE. Public example: KC 3–2 C9 in DESCRIPTION only. Verified UTF-8 folding remains within 75 octets. Public feed is refreshed; calendar-provider caches cannot be forced from this repository.
+
+## 2026-10-24 — Source only on website, easier copy editing
+
+- Removed Schedule source from ICS DESCRIPTION and removed the LoL Esports URL property. Website footer retains source attribution and the link.
+- Added an event format version so this text change increments existing event SEQUENCE once with stable UIDs; otherwise unchanged completed events could keep their old notes in calendar clients. A migration test verifies the update happens only once.
+- Reformatted PL/EN translation entries to one field per line without changing copy, and added docs/EDITING_TEXTS.md with the GitHub editing workflow, field map, metadata locations and deployment steps.
+- All 27 unit tests passed; Node syntax check passed for the website script. A live local build retains scores, removes the source URL from ICS and retains the source link on the website. Remote deployment verification pending.

@@ -75,3 +75,5 @@ See [project status](docs/PROJECT_STATUS.md), [build log](docs/BUILD_LOG.md) and
 
 
 Scores appear only in calendar event notes (ICS DESCRIPTION), never in event titles or visible schedule rows. Completed matches show **Wynik końcowy / Final result**; ongoing matches show **Live**, the last successful fetch time in UTC and a reminder that the score is a sync snapshot. These are series game wins from the source, not individual-game kills. Missing results are not invented. Refresh your subscribed calendar to fetch changes when your provider allows it; the server cannot force Google/Apple/Outlook refreshes.
+
+Teksty strony PL/EN możesz zmieniać w `template.html`, w sekcji `const strings`. Zobacz [instrukcję edycji tekstów](docs/EDITING_TEXTS.md).

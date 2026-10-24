@@ -230,3 +230,16 @@ class ScoreNotesTests(TestCase):
         final, _ = sync.merge(first, [event], self.now)
         self.assertNotIn('score', final['11'])
         self.assertNotIn('Final result:', self.unfolded(final))
+
+    def test_event_format_migration_updates_existing_subscription_once(self):
+        first, _ = sync.merge({}, [self.scored()], self.now)
+        first['11'].pop('format_version')  # Published state before note cleanup.
+        first['11']['sequence'] = 4
+        updated, count = sync.merge(first, [self.scored()], self.now)
+        self.assertEqual(count, 1)
+        self.assertEqual(updated['11']['sequence'], 5)
+        self.assertIn('UID:worlds2026-riot-11@marsellewoczko.com', self.unfolded(updated))
+        self.assertIn('Final result:', self.unfolded(updated))
+        same, count = sync.merge(updated, [self.scored()], self.now)
+        self.assertEqual(count, 0)
+        self.assertEqual(updated, same)
