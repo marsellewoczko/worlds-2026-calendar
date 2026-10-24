@@ -1,4 +1,4 @@
-# Project status — 2026-10-23
+# Project status — 2026-10-24
 
 ## Verified
 
@@ -11,11 +11,11 @@
 
 - Workflow targets GitHub Pages and runs at minutes 7 and 37, on manual request and relevant main changes. Schedule delivery and subscriber refresh cadence are not guaranteed.
 - Code commit [`dfd1ae0`](https://github.com/marsellewoczko/worlds-2026-calendar/commit/dfd1ae0314046564e9fca8e0e88dcebc17d6969e) is pushed to `main`. [GitHub CI](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/39913285145) passed.
-- [Deployment run](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/39913285142) passed tests, live sync and state persistence, then failed at `actions/configure-pages@v5`; upload and deploy were skipped.
-- The owner enabled Pages with GitHub Actions. GitHub API now confirms build_type=workflow and enforced HTTPS. [Manual publish run 39916652277](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/39916652277) has advanced from queued to waiting on the github-pages environment; no job steps have started. Public HTML/ICS still return 404, so deployment is not yet confirmed.
+- Public deployment is verified. [Scheduled run 40091990593](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40091990593), created 2026-10-24 at 13:58:02 Europe/Warsaw, completed successfully at 13:58:22: tests, live sync, state persistence, artifact upload and Pages deployment all passed. The five latest runs returned success.
+- Public HTML and calendar.ics both return HTTP 200. Both contain the same 46 source event identities; ICS UIDs are unique and folded lines stay within 75 octets. Previous Pages activation/waiting blockers are resolved.
 - No Google/Apple/Outlook account subscription has been manually tested. No personal portfolio implementation was changed.
 - Unofficial API availability, upstream ID changes and stale or missing source data remain risks. Omitted games are retained; explicit complete cancellation records update status. Estimated end times are disclosed.
 
 ## Next step
 
-Wait for manual publish run 39916652277 to complete, then verify public HTML/ICS and perform real subscriptions in Google Calendar, Apple Calendar and Outlook. Pages activation is complete; GitHub environment release is currently pending. The environment allows main, has no reviewers and no wait timer; API reports current_user_can_approve=false, so no specific owner approval action is established.
+Perform actual URL subscriptions in Google Calendar, Apple Calendar and Outlook, then verify provider refresh after a genuine source update. Keep monitoring the unofficial API and scheduled sync; do not assume provider refresh is immediate.

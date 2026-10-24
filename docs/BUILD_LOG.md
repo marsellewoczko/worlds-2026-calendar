@@ -35,3 +35,10 @@
 - Manual publish run [39916652277](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/39916652277) is queued for a runner, with no steps started at this observation. Public HTML/ICS still return 404 pending first deployment. The prior activation blocker is resolved.
 
 - Follow-up API observation: run advanced to waiting on github-pages, still without started steps. Environment policy allows main, has no reviewers and wait_timer=0; current_user_can_approve=false. No protection settings were weakened or changed.
+
+## 2026-10-24 — Public deployment verified
+
+- Latest five publish runs completed successfully. Latest inspected [run 40091990593](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40091990593) was triggered by schedule and passed every step, including tests, live synchronization, snapshot persistence, upload and Pages deployment. Run timestamps: 13:58:02–13:58:22 Europe/Warsaw.
+- Public page https://marsellewoczko.github.io/worlds-2026-calendar/ and calendar.ics both returned HTTP 200. Parsed embedded HTML events and public ICS: the same 46 identities, 46 unique UIDs, resolved template, author credit and valid 75-octet line folding.
+- Fetched and fast-forwarded the local checkout to retain automatic upstream schedule updates before documentation changes. No application code changed in this verification session.
+- Previous Pages activation and waiting blockers are resolved. Actual Google/Apple/Outlook account subscriptions remain untested; this check proves public availability and successful scheduled deployment, not client refresh behavior.
