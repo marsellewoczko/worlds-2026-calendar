@@ -57,24 +57,24 @@
   "115660540726095015": {
     "best_of": 1,
     "id": "115660540726095015",
-    "last_modified": "2026-10-23T23:26:16Z",
-    "sequence": 1,
+    "last_modified": "2026-10-24T00:43:43Z",
+    "sequence": 2,
     "stage": "Swiss",
     "start": "2026-10-23T23:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "LOS",
     "team2": "T1"
   },
   "115660540726095017": {
     "best_of": 1,
     "id": "115660540726095017",
-    "last_modified": "2026-10-23T06:41:22Z",
-    "sequence": 0,
+    "last_modified": "2026-10-24T00:43:43Z",
+    "sequence": 1,
     "stage": "Swiss",
     "start": "2026-10-24T00:00:00Z",
-    "state": "unstarted",
-    "team1": "TSW",
-    "team2": "LYON"
+    "state": "inProgress",
+    "team1": "LYON",
+    "team2": "TSW"
   },
   "115660540726095019": {
     "best_of": 1,
