@@ -18,14 +18,12 @@
 <p class="small" id="insideGuide">The event title shows the teams and series format. Times appear in your calendar’s timezone; end times are estimates.</p>
 <p class="small spoiler-notice" id="spoilerNotice">Spoilers in event notes: open a match to see its final score or the last synced Live score. Some calendar apps may preview the notes.</p>
 <div class="event-example">
-<p class="eyebrow" id="exampleLabel">Illustration only — not a scheduled match</p>
-<p class="example-title" id="exampleTitle">Team A vs Team B | Worlds 2026 (Bo3)</p>
-<p class="small" id="exampleWhere">Calendar grid: teams and time, with no score in the title.</p>
-<details><summary id="exampleOpen">Open sample event notes (contains an illustrative score)</summary>
-<p id="exampleResult">Final result: Team A 2–1 Team B</p>
-<p class="small" id="exampleDetails">Then: tournament stage and estimated end time. Live matches show the score’s last fetch time in UTC, not real-time updates.</p>
-<p class="small">Created by <a href="https://marsellewoczko.com">Marsel Lewoczko</a></p>
-</details></div>
+<p class="eyebrow" id="exampleLabel">Example from a calendar app</p>
+<details><summary id="exampleOpen">Show calendar screenshot (contains a match result)</summary>
+<img src="assets/calendar-example.jpg" width="958" height="1280" loading="lazy" alt="Calendar event screenshot: match title and time above, result in Notes, author credit at the bottom." id="exampleImage" style="display:block;width:100%;max-width:540px;height:auto;margin:16px auto 0;border-radius:12px">
+</details>
+<p class="small" id="exampleDetails">The title has no score. Open the event to find the result in Notes and the author credit at the bottom. Times and appearance depend on your calendar app.</p>
+</div>
 <p class="small" id="refreshNotice">The feed is scheduled to update about every 30 minutes. Your calendar app controls when it fetches changes, so scores and times may arrive later.</p>
 </section>
 <section><div class="eyebrow" id="scheduleLabel">World Championship</div><h2 id="scheduleTitle">Match schedule</h2><p class="small" id="updated">Feed last generated: %%UPDATED%%</p><div id="schedule"></div></section>
@@ -41,15 +39,13 @@ document.getElementById('tz').textContent=Intl.DateTimeFormat().resolvedOptions(
 document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(feed);document.getElementById('copy').textContent=lang==='pl'?'Skopiowano ✓':'Copied ✓'}catch{prompt(lang==='pl'?'Skopiuj adres URL:':'Copy URL:',feed)}});
 const strings={
 en: {
+  exampleImage:"Calendar event screenshot: match title and time above, result in Notes, author credit at the bottom.",
   insideTitle:"What appears in your calendar?",
   insideGuide:"The event title shows the teams and series format. Times appear in your calendar’s timezone; end times are estimates.",
   spoilerNotice:"Spoilers in event notes: open a match to see its final score or the last synced Live score. Some calendar apps may preview the notes.",
-  exampleLabel:"Illustration only — not a scheduled match",
-  exampleTitle:"Team A vs Team B | Worlds 2026 (Bo3)",
-  exampleWhere:"Calendar grid: teams and time, with no score in the title.",
-  exampleOpen:"Open sample event notes (contains an illustrative score)",
-  exampleResult:"Final result: Team A 2–1 Team B",
-  exampleDetails:"Then: tournament stage and estimated end time. Live matches show the score’s last fetch time in UTC, not real-time updates.",
+  exampleLabel:"Example from a calendar app",
+  exampleOpen:"Show calendar screenshot (contains a match result)",
+  exampleDetails:"The title has no score. Open the event to find the result in Notes and the author credit at the bottom. Times and appearance depend on your calendar app.",
   refreshNotice:"The feed is scheduled to update about every 30 minutes. Your calendar app controls when it fetches changes, so scores and times may arrive later.",
 
   headline:'Every match.<br><em>One calendar.</em>',
@@ -68,15 +64,13 @@ en: {
   updated:'Feed last generated: %%UPDATED%%'
 },
 pl: {
+  exampleImage:"Zrzut wydarzenia w kalendarzu: tytuł i godzina u góry, wynik w notatkach, podpis autora na dole.",
   insideTitle:"Co zobaczysz w swoim kalendarzu?",
   insideGuide:"Tytuł wydarzenia zawiera drużyny i format serii. Godziny wyświetlają się w strefie Twojego kalendarza; czas zakończenia jest szacunkowy.",
   spoilerNotice:"Spoilery w notatkach: po otwarciu meczu zobaczysz wynik końcowy albo Live z ostatniej synchronizacji. Niektóre aplikacje mogą pokazywać podgląd notatki.",
-  exampleLabel:"Przykład poglądowy — to nie jest mecz z terminarza",
-  exampleTitle:"Drużyna A vs Drużyna B | Worlds 2026 (Bo3)",
-  exampleWhere:"Widok kalendarza: drużyny i godzina, bez wyniku w tytule.",
-  exampleOpen:"Otwórz przykładową notatkę (zawiera poglądowy wynik)",
-  exampleResult:"Wynik końcowy: Drużyna A 2–1 Drużyna B",
-  exampleDetails:"Dalej: etap turnieju i informacja o szacunkowym końcu. Mecze Live mają godzinę ostatniego pobrania wyniku w UTC — to nie są aktualizacje na żywo.",
+  exampleLabel:"Przykład z aplikacji kalendarza",
+  exampleOpen:"Pokaż zrzut kalendarza (zawiera wynik meczu)",
+  exampleDetails:"Tytuł nie zawiera wyniku. Po otwarciu wydarzenia wynik znajdziesz w notatkach, a podpis autora na dole. Godziny i wygląd zależą od Twojej aplikacji kalendarza.",
   refreshNotice:"Źródłowy kalendarz aktualizuje się według harmonogramu co około 30 minut. Twoja aplikacja decyduje, kiedy pobierze zmiany, więc wyniki i godziny mogą dotrzeć później.",
 
   headline:'Wszystkie mecze.<br><em>Jeden kalendarz.</em>',
@@ -98,7 +92,7 @@ let savedLang;
 try{savedLang=localStorage.getItem('worldsCalendarLang')}catch{}
 let lang=['en','pl'].includes(savedLang)?savedLang:((navigator.language||'').startsWith('pl')?'pl':'en');
 function selectLanguage(value){lang=value;try{localStorage.setItem('worldsCalendarLang',lang)}catch{}render()}
-function render(){document.documentElement.lang=lang;document.getElementById('en').setAttribute('aria-pressed',String(lang==='en'));document.getElementById('pl').setAttribute('aria-pressed',String(lang==='pl'));for(const [id,val] of Object.entries(strings[lang])){const node=document.getElementById(id);if(!node)continue;if(id==='headline')node.innerHTML=val;else node.textContent=val;}document.getElementById('copy').textContent=strings[lang].copy;const root=document.getElementById('schedule');root.replaceChildren();const fmtDay=new Intl.DateTimeFormat(lang==='pl'?'pl-PL':'en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});const fmtTime=new Intl.DateTimeFormat(lang==='pl'?'pl-PL':'en-US',{hour:'2-digit',minute:'2-digit'});let prev='';for(const m of events){const d=new Date(m.start),date=fmtDay.format(d);if(date!==prev){const header=document.createElement('div');header.className='date';header.textContent=date;root.append(header);prev=date;}const item=document.createElement('div');item.className='event';const hour=document.createElement('div');hour.className='time';hour.textContent=fmtTime.format(d);const center=document.createElement('div');const title=document.createElement('div');title.className='teams';title.textContent=m.team1+' vs '+m.team2;const sub=document.createElement('div');sub.className='sub';sub.textContent=m.stage;center.append(title,sub);const chip=document.createElement('span');chip.className='chip';const states=lang==='pl'?{completed:'Zakończony',inProgress:'Na żywo',cancelled:'Odwołany',canceled:'Odwołany'}:{completed:'Completed',inProgress:'Live',cancelled:'Cancelled',canceled:'Cancelled'};chip.textContent='Bo'+m.best_of+(states[m.state]?' · '+states[m.state]:'');item.append(hour,center,chip);root.append(item);}}
+function render(){document.documentElement.lang=lang;document.getElementById('en').setAttribute('aria-pressed',String(lang==='en'));document.getElementById('pl').setAttribute('aria-pressed',String(lang==='pl'));for(const [id,val] of Object.entries(strings[lang])){const node=document.getElementById(id);if(!node)continue;if(id==='headline')node.innerHTML=val;else if(id==='exampleImage')node.alt=val;else node.textContent=val;}document.getElementById('copy').textContent=strings[lang].copy;const root=document.getElementById('schedule');root.replaceChildren();const fmtDay=new Intl.DateTimeFormat(lang==='pl'?'pl-PL':'en-US',{weekday:'long',month:'long',day:'numeric',year:'numeric'});const fmtTime=new Intl.DateTimeFormat(lang==='pl'?'pl-PL':'en-US',{hour:'2-digit',minute:'2-digit'});let prev='';for(const m of events){const d=new Date(m.start),date=fmtDay.format(d);if(date!==prev){const header=document.createElement('div');header.className='date';header.textContent=date;root.append(header);prev=date;}const item=document.createElement('div');item.className='event';const hour=document.createElement('div');hour.className='time';hour.textContent=fmtTime.format(d);const center=document.createElement('div');const title=document.createElement('div');title.className='teams';title.textContent=m.team1+' vs '+m.team2;const sub=document.createElement('div');sub.className='sub';sub.textContent=m.stage;center.append(title,sub);const chip=document.createElement('span');chip.className='chip';const states=lang==='pl'?{completed:'Zakończony',inProgress:'Na żywo',cancelled:'Odwołany',canceled:'Odwołany'}:{completed:'Completed',inProgress:'Live',cancelled:'Cancelled',canceled:'Cancelled'};chip.textContent='Bo'+m.best_of+(states[m.state]?' · '+states[m.state]:'');item.append(hour,center,chip);root.append(item);}}
 document.getElementById('en').onclick=()=>{selectLanguage('en')};
 document.getElementById('pl').onclick=()=>{selectLanguage('pl')};
 render();

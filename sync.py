@@ -320,7 +320,9 @@ def run():
     # failures must leave the last successful build and state untouched.
     ics = make_ics(merged).encode("utf-8")
     html = make_html(merged, current).encode("utf-8")
+    screenshot = (ROOT / "assets" / "calendar-example.jpg").read_bytes()
     state_bytes = (json.dumps(merged, indent=2, ensure_ascii=False, sort_keys=True) + "\n").encode("utf-8")
+    atomic_write(SITE / "assets" / "calendar-example.jpg", screenshot)
     atomic_write(SITE / "calendar.ics", ics)
     atomic_write(SITE / "index.html", html)
     atomic_write(SITE / ".nojekyll", b"")

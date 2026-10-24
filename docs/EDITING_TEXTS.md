@@ -29,4 +29,6 @@ Teksty statusów meczów (`Zakończony`, `Na żywo` itd.) są w obiekcie `states
 
 Nie edytuj generowanego `site/index.html` — kolejne wdrożenie go zastąpi. Nazwy drużyn, daty i wyniki pochodzą z API. Notatki kalendarza ICS są generowane osobno w funkcji `make_ics` w `sync.py`; nie zmieniają się przez edycję `strings`.
 
-Sekcja „Co zobaczysz w swoim kalendarzu?” korzysta z kluczy `insideTitle`, `insideGuide`, `spoilerNotice`, `exampleLabel`, `exampleTitle`, `exampleWhere`, `exampleOpen`, `exampleResult`, `exampleDetails` i `refreshNotice` w obu wersjach `strings`. Przykład musi pozostać wyraźnie oznaczony jako poglądowy.
+Sekcja „Co zobaczysz w swoim kalendarzu?” korzysta z kluczy `insideTitle`, `insideGuide`, `spoilerNotice`, `exampleLabel`, `exampleOpen`, `exampleDetails` i `refreshNotice` w obu wersjach `strings`. Przykład musi pozostać wyraźnie oznaczony jako poglądowy.
+
+Zrzut kalendarza znajduje się w `assets/calendar-example.jpg`; generator kopiuje go do publikowanej strony. `exampleImage` zmienia opis alternatywny, a `exampleOpen` podpis rozwijanego podglądu.
