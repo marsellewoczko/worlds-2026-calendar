@@ -131,16 +131,15 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095021",
-    "last_modified": "2026-10-24T18:27:56Z",
+    "last_modified": "2026-10-24T19:01:39Z",
     "score": [
-      0,
+      1,
       0
     ],
-    "score_checked_at": "2026-10-24T18:27:56Z",
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-24T18:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "MKOI",
     "team2": "CFO"
   },
@@ -200,11 +199,16 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095031",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 3,
+    "last_modified": "2026-10-24T19:01:39Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-10-24T19:01:39Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-24T19:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "G2",
     "team2": "LOS"
   },
