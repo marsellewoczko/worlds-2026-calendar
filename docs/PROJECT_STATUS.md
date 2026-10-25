@@ -5,13 +5,13 @@
 - One canonical page: https://lolworldscalendar.com/. Feed: https://lolworldscalendar.com/calendar.ics.
 - PL/EN interface, calendar subscription, local match times, source attribution, author credit and screenshot explanation. Match results appear in ICS notes, not in event titles or visible schedule rows.
 - Stable UIDs/SEQUENCE, explicit cancellations and last successful data preserved on source/render failure. Estimated end times and refresh limitations are disclosed.
-- Latest update adds seven PL/EN FAQ entries on the same page and initial HTML schedule rows in UTC. JavaScript upgrades UTC times to the browser timezone. A fragment link reaches FAQ without creating another page.
+- Published update adds seven PL/EN FAQ entries on the same page and initial HTML schedule rows in UTC. JavaScript upgrades UTC times to the browser timezone. A fragment link reaches FAQ without creating another page.
 
 ## Verification
 
 - Python 3.12 standard-library runtime. All 31 unit/integration tests pass, including UTC initial rows, escaping source text, update identity and error paths.
 - Chromium checks pass on mobile/desktop: PL/EN, local times, clipboard, blocked storage, FAQ anchor/keyboard interaction. With JavaScript disabled, 46 source matches, UTC labels, FAQ disclosure and subscription URL remain available.
-- Existing production page and ICS return HTTPS 200. Legacy GitHub Pages URLs and www redirect to the canonical HTTPS domain. Deployment evidence for the latest update is recorded in BUILD_LOG.md.
+- Production page and ICS return HTTPS 200. Latest publish run 40199501228 succeeded; public raw HTML contains 46 UTC event rows and seven FAQ questions. Legacy GitHub Pages URLs and www redirect to the canonical HTTPS domain. Deployment evidence for the latest update is recorded in BUILD_LOG.md.
 - Search Console owner evidence confirms sitemap Success, URL is on Google, Page is indexed and correct canonical. Query rankings, impressions and traffic have not been established.
 
 ## Public repository review
