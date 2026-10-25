@@ -8,6 +8,7 @@ on:
       - sync.py
       - template.html
       - assets/**
+      - static/**
       - tests/**
       - .github/workflows/publish.yml
   schedule:

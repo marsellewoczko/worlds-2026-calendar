@@ -3,7 +3,7 @@
 ## Verified
 
 - Python 3.12 standard-library synchronization; live Worlds API returned 46 current-season matches.
-- Stable IDs, sequence updates, explicit cancellations, UTC offsets, escaped/folded ICS, preserved prior records and failure-safe output generation: 28 tests pass.
+- Stable IDs, sequence updates, explicit cancellations, UTC offsets, escaped/folded ICS, preserved prior records and failure-safe output generation: 29 tests pass.
 - Real Chromium: PL/EN, mobile/desktop, Warsaw/New York local times, clipboard, subscription URLs and disabled browser storage pass.
 - Local page and ICS generated from live source. The generated site is ignored; data/events.json is the durable real-source snapshot.
 
@@ -47,3 +47,7 @@ Explore creator-authorized match recap links. A version without score notes is a
 - Next: test an existing subscription in the owner's calendar app; use the new domain for sharing and Google Search Console registration.
 
 - Latest copy update: dash punctuation removed from editorial PL/EN text and page titles; Chromium layout and public deployment verified.
+
+## Google discovery
+
+- Technical SEO improvements and canonical-domain sitemap/robots are locally validated, publication pending. See [SEARCH_VISIBILITY.md](SEARCH_VISIBILITY.md). Google index status/rank is not confirmed; owner is setting up Domain verification in Search Console.

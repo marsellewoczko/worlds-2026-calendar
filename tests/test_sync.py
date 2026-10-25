@@ -253,3 +253,24 @@ class ScoreNotesTests(TestCase):
             elif event.get('state') == 'inProgress':
                 self.assertTrue(description.startswith('DESCRIPTION:Live:'))
             self.assertTrue(description.endswith('\\n\\nCreated by Marsel Lewoczko — https://marsellewoczko.com'))
+
+class SiteBuildTests(TestCase):
+    def test_build_publishes_consistent_crawl_metadata_and_calendar(self):
+        import tempfile
+        import json
+        import xml.etree.ElementTree as ET
+        from pathlib import Path
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            site = root / 'site'
+            with patch.object(sync, 'STATE', root/'events.json'), patch.object(sync, 'SITE', site), patch.object(sync, 'league_id', return_value='test'), patch.object(sync, 'download', return_value=[fixture()]):
+                sync.run()
+            html = (site/'index.html').read_text()
+            sitemap = ET.parse(site/'sitemap.xml')
+            canonical = sitemap.find('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc').text
+            self.assertEqual(canonical, 'https://lolworldscalendar.com/')
+            self.assertIn(f'<link rel="canonical" href="{canonical}">', html)
+            self.assertIn('Sitemap: '+canonical+'sitemap.xml', (site/'robots.txt').read_text())
+            self.assertNotIn('noindex', html.lower())
+            self.assertIn('BEGIN:VEVENT', (site/'calendar.ics').read_text())
+            self.assertEqual(len(json.loads((root/'events.json').read_text())), 1)

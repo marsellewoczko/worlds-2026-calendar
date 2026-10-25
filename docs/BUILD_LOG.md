@@ -134,3 +134,11 @@
 - Chromium verified updated EN/PL hero, lead, instructions and disclaimer without dash characters and no overflow at mobile/desktop widths. Publication pending.
 
 - Publish run 40184234185 succeeded; updated copy is verified in public HTML at https://lolworldscalendar.com/.
+
+## 2026-10-25 — Search discovery for custom domain
+
+- Public audit: homepage returned 200 with no noindex/X-Robots-Tag restriction; robots.txt and sitemap.xml returned 404. Google indexing was not independently established.
+- Added canonical HTTPS apex, descriptive title/description targeting Worlds 2026 Calendar, Open Graph URL/site metadata and factual WebSite structured data. Kept the owner's hero wording unchanged; visible header and English introduction now identify the product naturally.
+- Added root robots.txt and sitemap.xml to the build, with static-file deployment triggers and no invented sitemap modification date. Added an integration test for emitted crawl metadata and calendar output. All 29 tests passed.
+- Live local build and Chromium smoke checks passed: PL/EN, mobile/desktop, local times, clipboard, storage fallback, valid structured data and SEO metadata. Publication pending.
+- Owner is creating a Domain property in Search Console; TXT verification and submission remain manual external steps. Documented the workflow in SEARCH_VISIBILITY.md. No ranking/indexing claims.

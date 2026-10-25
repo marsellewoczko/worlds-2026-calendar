@@ -321,7 +321,11 @@ def run():
     ics = make_ics(merged).encode("utf-8")
     html = make_html(merged, current).encode("utf-8")
     screenshot = (ROOT / "assets" / "calendar-example.jpg").read_bytes()
+    static_files = {name: (ROOT / "static" / name).read_bytes()
+                    for name in ("robots.txt", "sitemap.xml")}
     state_bytes = (json.dumps(merged, indent=2, ensure_ascii=False, sort_keys=True) + "\n").encode("utf-8")
+    for name, content in static_files.items():
+        atomic_write(SITE / name, content)
     atomic_write(SITE / "assets" / "calendar-example.jpg", screenshot)
     atomic_write(SITE / "calendar.ics", ics)
     atomic_write(SITE / "index.html", html)
