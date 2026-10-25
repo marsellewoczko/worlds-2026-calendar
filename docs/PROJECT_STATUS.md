@@ -45,3 +45,5 @@ Explore creator-authorized match recap links. A version without score notes is a
 - Public HTML and ICS contain the same 46 event IDs with unique UIDs and the unchanged original UID namespace. Page subscription link derives from the new origin.
 - Network access to the new domain now works. Actual calendar-provider refresh/redirect handling remains a client acceptance check; no duplicate events should be introduced by a UID change because UIDs were preserved.
 - Next: test an existing subscription in the owner's calendar app; use the new domain for sharing and Google Search Console registration.
+
+- Latest copy update: dash punctuation removed from editorial PL/EN text and page titles; Chromium layout and public deployment verified.

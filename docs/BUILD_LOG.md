@@ -132,3 +132,5 @@
 
 - Rephrased EN/PL subscription instructions without dashes, removed dash separators from page/social titles, replaced fan-made with fan, and replaced loading dashes with ellipses. Source match names and supplied screenshot remain unchanged.
 - Chromium verified updated EN/PL hero, lead, instructions and disclaimer without dash characters and no overflow at mobile/desktop widths. Publication pending.
+
+- Publish run 40184234185 succeeded; updated copy is verified in public HTML at https://lolworldscalendar.com/.
