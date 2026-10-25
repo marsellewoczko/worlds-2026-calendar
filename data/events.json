@@ -243,16 +243,11 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095035",
-    "last_modified": "2026-10-25T00:33:49Z",
-    "score": [
-      0,
-      0
-    ],
-    "score_checked_at": "2026-10-25T00:33:49Z",
-    "sequence": 4,
+    "last_modified": "2026-10-25T01:11:52Z",
+    "sequence": 5,
     "stage": "Swiss",
     "start": "2026-10-25T00:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "TLAW",
     "team2": "BLG"
   },
