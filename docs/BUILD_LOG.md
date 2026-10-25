@@ -150,3 +150,9 @@
 - Owner supplied screenshots for the correct lolworldscalendar.com Domain property: sitemap Success, 1 discovered page, live homepage available to Google/page can be indexed, and Indexing requested.
 - Recorded completed owner verification/submission steps in project status and search documentation. One discovered page is expected for the single-page sitemap; matches are not separate landing pages.
 - Actual inclusion in Google Search, ranking for worlds 2026 calendar, impressions and traffic remain unconfirmed. Next step is monitoring indexed URL Inspection and Performance; no application changes or extra tests were necessary for this documentation-only update.
+
+## 2026-10-25 — Google index inclusion confirmed
+
+- Owner provided Search Console URL Inspection evidence for https://lolworldscalendar.com/: URL is on Google, Page is indexed, successful fetch by Googlebot smartphone, crawling/indexing allowed and HTTPS served.
+- Google-selected canonical is the inspected HTTPS apex, matching the declared canonical. Sitemap association is shown.
+- Updated status and search documentation. This establishes a publicly deployed product indexed by Google; no query ranking, traffic or user-adoption metrics are inferred. Next step: monitor Search Console Performance for the target query, impressions and clicks. Documentation-only change, no application tests needed.

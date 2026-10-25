@@ -22,3 +22,7 @@ At implementation, public Google index status was not independently established.
 ## Confirmed owner-submitted evidence, 2026-10-25
 
 Screenshots show the lolworldscalendar.com Domain property, sitemap Success with one discovered page, URL available to Google and Page can be indexed in the live test, and Indexing requested for the HTTPS homepage. These establish successful submission and crawl eligibility, not actual index inclusion or query position. Next check: indexed URL Inspection result and Performance report. Repeated indexing requests do not increase queue priority.
+
+## Index inclusion confirmed, 2026-10-25
+
+A subsequent owner-supplied Search Console screenshot for https://lolworldscalendar.com/ shows URL is on Google and Page is indexed. It reports a successful Googlebot smartphone fetch, crawling/indexing allowed, HTTPS, and Google-selected canonical equal to the inspected HTTPS apex. This confirms index inclusion as reported by Search Console; it does not establish position for worlds 2026 calendar or observed impressions/clicks. Monitor Performance for those results.
