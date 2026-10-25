@@ -142,3 +142,5 @@
 - Added root robots.txt and sitemap.xml to the build, with static-file deployment triggers and no invented sitemap modification date. Added an integration test for emitted crawl metadata and calendar output. All 29 tests passed.
 - Live local build and Chromium smoke checks passed: PL/EN, mobile/desktop, local times, clipboard, storage fallback, valid structured data and SEO metadata. Publication pending.
 - Owner is creating a Domain property in Search Console; TXT verification and submission remain manual external steps. Documented the workflow in SEARCH_VISIBILITY.md. No ranking/indexing claims.
+
+- SEO publish run 40186069064 and CI succeeded. Verified public homepage title/canonical plus HTTP 200 for robots.txt and sitemap.xml. Owner obtained a Domain TXT verification value and was given home.pl entry instructions. Verification and indexing request remain unconfirmed; no credential or verification value was stored in repository documentation.

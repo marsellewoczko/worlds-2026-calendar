@@ -50,4 +50,4 @@ Explore creator-authorized match recap links. A version without score notes is a
 
 ## Google discovery
 
-- Technical SEO improvements and canonical-domain sitemap/robots are locally validated, publication pending. See [SEARCH_VISIBILITY.md](SEARCH_VISIBILITY.md). Google index status/rank is not confirmed; owner is setting up Domain verification in Search Console.
+- Technical SEO improvements are deployed. Public homepage, robots.txt and sitemap.xml return 200; canonical URL and Worlds 2026 Calendar title are verified. See [SEARCH_VISIBILITY.md](SEARCH_VISIBILITY.md). Google index status/rank is not confirmed; owner is setting up Domain verification in Search Console.
