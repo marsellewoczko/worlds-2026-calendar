@@ -127,3 +127,8 @@
 - Chromium checks passed for exact PL/EN text and no horizontal overflow at 390px and 1280px. Publication pending.
 
 - Publish run 40183890349 succeeded; public HTML at https://lolworldscalendar.com/ contains both requested headline variants.
+
+## 2026-10-25 — Remove dash punctuation from site copy
+
+- Rephrased EN/PL subscription instructions without dashes, removed dash separators from page/social titles, replaced fan-made with fan, and replaced loading dashes with ellipses. Source match names and supplied screenshot remain unchanged.
+- Chromium verified updated EN/PL hero, lead, instructions and disclaimer without dash characters and no overflow at mobile/desktop widths. Publication pending.
