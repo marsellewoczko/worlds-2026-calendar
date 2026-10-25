@@ -40,7 +40,8 @@ Explore creator-authorized match recap links. A version without score notes is a
 
 ## Custom domain — 2026-10-25
 
-- Owner configured DNS and GitHub Pages custom domain lolworldscalendar.com. GitHub API confirms cname and an approved certificate covering apex and www.
-- HTTPS enforcement is currently false; owner must enable Enforce HTTPS in Pages settings. Legacy page and ICS URLs return 301 to the same paths on the new domain, currently via HTTP.
-- Direct new-domain requests are blocked by this cloud environment's proxy (CONNECT 403), so public HTML/ICS availability under the custom domain is not yet independently verified here. Required apex/www network additions are saved in the environment draft, not assumed applied.
-- Next: enable Enforce HTTPS, apply saved network settings, verify HTTPS HTML/ICS and legacy redirects, then test existing calendar subscriptions. UIDs must remain unchanged.
+- Migration verified: https://lolworldscalendar.com/ and /calendar.ics both return HTTP 200 with valid TLS; GitHub confirms approved apex/www certificate and https_enforced=true.
+- www and legacy GitHub Pages URLs return 301 to the corresponding HTTPS apex paths. Legacy ICS follows through to the valid feed.
+- Public HTML and ICS contain the same 46 event IDs with unique UIDs and the unchanged original UID namespace. Page subscription link derives from the new origin.
+- Network access to the new domain now works. Actual calendar-provider refresh/redirect handling remains a client acceptance check; no duplicate events should be introduced by a UID change because UIDs were preserved.
+- Next: test an existing subscription in the owner's calendar app; use the new domain for sharing and Google Search Console registration.

@@ -113,3 +113,10 @@
 - Automatic Pages configuration attempt was denied (integration HTTP 403); owner saved custom domain through GitHub UI.
 - GitHub API confirms cname and approved certificate for apex/www; https_enforced=false at observation. Legacy page and ICS requests returned 301 to matching custom-domain paths over HTTP. Full new-domain requests hit this environment's proxy CONNECT 403, not an observed origin failure.
 - Saved additive new-domain network requirements preserving existing rules. Updated README URLs. No application/UID changes, and no claim that existing calendar clients followed redirects. Owner action and remaining checks recorded in PROJECT_STATUS.md.
+
+## 2026-10-25 — Custom domain migration verified
+
+- Owner enabled HTTPS enforcement. GitHub API confirms https_enforced=true and an approved certificate for apex/www.
+- Direct HTTPS HTML and ICS returned 200. www and both legacy GitHub Pages page/feed URLs returned 301 to matching HTTPS apex paths and successfully resolved to 200.
+- Parsed public HTML and ICS: same 46 unique source identities, original UID namespace retained, generated subscription URL uses the new origin. No application changes were needed for the domain switch.
+- Cloud network access is now available. Actual subscribed calendar-client refresh has not been independently observed; owner acceptance remains. README already points to the new canonical sharing/feed addresses.
