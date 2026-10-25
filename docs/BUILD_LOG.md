@@ -144,3 +144,9 @@
 - Owner is creating a Domain property in Search Console; TXT verification and submission remain manual external steps. Documented the workflow in SEARCH_VISIBILITY.md. No ranking/indexing claims.
 
 - SEO publish run 40186069064 and CI succeeded. Verified public homepage title/canonical plus HTTP 200 for robots.txt and sitemap.xml. Owner obtained a Domain TXT verification value and was given home.pl entry instructions. Verification and indexing request remain unconfirmed; no credential or verification value was stored in repository documentation.
+
+## 2026-10-25 — Search Console submission confirmed
+
+- Owner supplied screenshots for the correct lolworldscalendar.com Domain property: sitemap Success, 1 discovered page, live homepage available to Google/page can be indexed, and Indexing requested.
+- Recorded completed owner verification/submission steps in project status and search documentation. One discovered page is expected for the single-page sitemap; matches are not separate landing pages.
+- Actual inclusion in Google Search, ranking for worlds 2026 calendar, impressions and traffic remain unconfirmed. Next step is monitoring indexed URL Inspection and Performance; no application changes or extra tests were necessary for this documentation-only update.

@@ -18,3 +18,7 @@ The build publishes /robots.txt allowing crawling and advertising /sitemap.xml. 
 URL-prefix verification by HTML tag is an alternative if preferred; it is not required in addition to verified Domain ownership. Do not add authentication credentials to the repository.
 
 At implementation, public Google index status was not independently established. Search Console verification/submission must be confirmed separately; no ranking, impressions or successful indexing are claimed.
+
+## Confirmed owner-submitted evidence, 2026-10-25
+
+Screenshots show the lolworldscalendar.com Domain property, sitemap Success with one discovered page, URL available to Google and Page can be indexed in the live test, and Indexing requested for the HTTPS homepage. These establish successful submission and crawl eligibility, not actual index inclusion or query position. Next check: indexed URL Inspection result and Performance report. Repeated indexing requests do not increase queue priority.
