@@ -179,16 +179,15 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095027",
-    "last_modified": "2026-10-24T23:52:05Z",
+    "last_modified": "2026-10-25T00:33:49Z",
     "score": [
-      0,
+      1,
       0
     ],
-    "score_checked_at": "2026-10-24T23:52:05Z",
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-24T23:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "DK",
     "team2": "T1"
   },
@@ -244,11 +243,16 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095035",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 3,
+    "last_modified": "2026-10-25T00:33:49Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-10-25T00:33:49Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-25T00:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "TLAW",
     "team2": "BLG"
   },
