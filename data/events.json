@@ -295,13 +295,13 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095047",
-    "last_modified": "2026-10-25T02:02:28Z",
-    "sequence": 3,
+    "last_modified": "2026-10-25T07:15:44Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-25T18:00:00Z",
     "state": "unstarted",
-    "team1": "TES",
-    "team2": "G2"
+    "team1": "G2",
+    "team2": "TES"
   },
   "115660540726095049": {
     "best_of": 1,
