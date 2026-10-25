@@ -125,3 +125,5 @@
 
 - Changed default/EN hero to Every match / in your calendar. and PL to Wszystkie mecze / w Twoim kalendarzu. Kept explicit line break, second-line emphasis and author credit.
 - Chromium checks passed for exact PL/EN text and no horizontal overflow at 390px and 1280px. Publication pending.
+
+- Publish run 40183890349 succeeded; public HTML at https://lolworldscalendar.com/ contains both requested headline variants.
