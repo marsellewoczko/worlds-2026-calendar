@@ -2,8 +2,8 @@
 
 Fan-made, automatically updated League of Legends Worlds 2026 calendar by **Marsel Lewoczko**.
 
-- **Website (after deployment):** https://marsellewoczko.github.io/worlds-2026-calendar/
-- **Subscribable iCalendar feed (after deployment):** https://marsellewoczko.github.io/worlds-2026-calendar/calendar.ics
+- **Website:** https://lolworldscalendar.com/
+- **Subscribable iCalendar feed:** https://lolworldscalendar.com/calendar.ics
 - **Author and projects:** https://marsellewoczko.com
 
 Includes a bilingual PL/EN responsive website with local match times, stable event identities, and links to add the calendar to Apple Calendar, Outlook, and Google Calendar.
@@ -77,3 +77,6 @@ See [project status](docs/PROJECT_STATUS.md), [build log](docs/BUILD_LOG.md) and
 Scores appear only in calendar event notes (ICS DESCRIPTION), never in event titles or visible schedule rows. Completed matches show **Wynik końcowy / Final result**; ongoing matches show **Live**, the last successful fetch time in UTC and a reminder that the score is a sync snapshot. These are series game wins from the source, not individual-game kills. Missing results are not invented. Refresh your subscribed calendar to fetch changes when your provider allows it; the server cannot force Google/Apple/Outlook refreshes.
 
 Teksty strony PL/EN możesz zmieniać w `template.html`, w sekcji `const strings`. Zobacz [instrukcję edycji tekstów](docs/EDITING_TEXTS.md).
+
+
+Custom domain migration: `lolworldscalendar.com` is configured in GitHub Pages. DNS uses the four GitHub Pages A records and a `www` CNAME to `marsellewoczko.github.io`. Custom Actions deployment uses the Pages setting; it does not require a CNAME file in the artifact. Keep existing UID values unchanged. The legacy GitHub Pages URLs issue 301 redirects to the corresponding new paths; actual provider handling must be checked. HTTPS enforcement and end-to-end checks are tracked in docs/PROJECT_STATUS.md.

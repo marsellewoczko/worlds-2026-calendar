@@ -1,4 +1,4 @@
-# Project status — 2026-10-24
+# Project status — 2026-10-25
 
 ## Verified
 
@@ -37,3 +37,10 @@ Explore creator-authorized match recap links. A version without score notes is a
 - Calendar-contents guide and collapsible, explicitly illustrative score note added in PL/EN; browser verified and published successfully.
 
 - Explanation now uses the supplied screenshot behind a spoiler disclosure; local build/browser verified and publicly deployed; JPEG returns HTTP 200.
+
+## Custom domain — 2026-10-25
+
+- Owner configured DNS and GitHub Pages custom domain lolworldscalendar.com. GitHub API confirms cname and an approved certificate covering apex and www.
+- HTTPS enforcement is currently false; owner must enable Enforce HTTPS in Pages settings. Legacy page and ICS URLs return 301 to the same paths on the new domain, currently via HTTP.
+- Direct new-domain requests are blocked by this cloud environment's proxy (CONNECT 403), so public HTML/ICS availability under the custom domain is not yet independently verified here. Required apex/www network additions are saved in the environment draft, not assumed applied.
+- Next: enable Enforce HTTPS, apply saved network settings, verify HTTPS HTML/ICS and legacy redirects, then test existing calendar subscriptions. UIDs must remain unchanged.

@@ -106,3 +106,10 @@
 - Replaced the calendar screenshot with the newly supplied original (906×1280). Updated declared dimensions and image URL version so browsers fetch the replacement. Existing spoiler disclosure and captions are unchanged. Publication pending.
 
 - Replacement screenshot verified in Chromium at 390px/1280px. Publication run 40120806327 succeeded; downloaded public image matches the new upload byte for byte.
+
+## 2026-10-25 — Custom domain configuration
+
+- Owner purchased/activated lolworldscalendar.com, set four apex A records for GitHub Pages and www CNAME to marsellewoczko.github.io. Screenshots show correct records and successful GitHub DNS validation.
+- Automatic Pages configuration attempt was denied (integration HTTP 403); owner saved custom domain through GitHub UI.
+- GitHub API confirms cname and approved certificate for apex/www; https_enforced=false at observation. Legacy page and ICS requests returned 301 to matching custom-domain paths over HTTP. Full new-domain requests hit this environment's proxy CONNECT 403, not an observed origin failure.
+- Saved additive new-domain network requirements preserving existing rules. Updated README URLs. No application/UID changes, and no claim that existing calendar clients followed redirects. Owner action and remaining checks recorded in PROJECT_STATUS.md.
