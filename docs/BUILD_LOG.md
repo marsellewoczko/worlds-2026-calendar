@@ -120,3 +120,8 @@
 - Direct HTTPS HTML and ICS returned 200. www and both legacy GitHub Pages page/feed URLs returned 301 to matching HTTPS apex paths and successfully resolved to 200.
 - Parsed public HTML and ICS: same 46 unique source identities, original UID namespace retained, generated subscription URL uses the new origin. No application changes were needed for the domain switch.
 - Cloud network access is now available. Actual subscribed calendar-client refresh has not been independently observed; owner acceptance remains. README already points to the new canonical sharing/feed addresses.
+
+## 2026-10-25 — Updated hero wording
+
+- Changed default/EN hero to Every match / in your calendar. and PL to Wszystkie mecze / w Twoim kalendarzu. Kept explicit line break, second-line emphasis and author credit.
+- Chromium checks passed for exact PL/EN text and no horizontal overflow at 390px and 1280px. Publication pending.
