@@ -283,11 +283,16 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095045",
-    "last_modified": "2026-10-25T02:02:28Z",
-    "sequence": 3,
+    "last_modified": "2026-10-25T16:59:51Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-10-25T16:59:51Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-25T17:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "HLE",
     "team2": "IG"
   },
