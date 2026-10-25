@@ -259,11 +259,16 @@
     "best_of": 3,
     "format_version": 3,
     "id": "115660540726095037",
-    "last_modified": "2026-10-25T02:02:28Z",
-    "sequence": 3,
+    "last_modified": "2026-10-25T19:03:07Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-10-25T19:03:07Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-25T19:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "MKOI",
     "team2": "DK"
   },
@@ -299,16 +304,15 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095047",
-    "last_modified": "2026-10-25T18:28:04Z",
+    "last_modified": "2026-10-25T19:03:07Z",
     "score": [
-      0,
+      1,
       0
     ],
-    "score_checked_at": "2026-10-25T18:28:04Z",
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-25T18:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "TES",
     "team2": "G2"
   },
