@@ -274,3 +274,33 @@ class SiteBuildTests(TestCase):
             self.assertNotIn('noindex', html.lower())
             self.assertIn('BEGIN:VEVENT', (site/'calendar.ics').read_text())
             self.assertEqual(len(json.loads((root/'events.json').read_text())), 1)
+
+class InitialScheduleTests(TestCase):
+    def test_initial_html_has_utc_schedule_and_no_score_spoilers(self):
+        now = datetime(2026, 10, 25, tzinfo=timezone.utc)
+        event = fixture(name='T1', start='2026-10-23T17:00:00+02:00')
+        event['state'] = 'completed'
+        event['match']['teams'][0]['result'] = {'gameWins': 1}
+        event['match']['teams'][1]['result'] = {'gameWins': 0}
+        state, _ = sync.merge({}, [event, fixture(mid='12')], now)
+        html = sync.make_html(state, now)
+        self.assertIn(sync.make_schedule(state), html)
+        self.assertEqual(sync.make_schedule(state).count('class="event"'), 2)
+        self.assertIn('T1 vs G2', sync.make_schedule(state))
+        self.assertIn('15:00 UTC', sync.make_schedule(state))
+        self.assertIn('datetime="2026-10-23T15:00:00Z"', sync.make_schedule(state))
+        self.assertNotIn('1–0', sync.make_schedule(state))
+        self.assertIn('<strong id="tz">UTC</strong>', html)
+        self.assertIn('<strong id="count">2</strong>', html)
+        self.assertNotIn('%%SCHEDULE%%', html)
+
+    def test_initial_schedule_escapes_source_text(self):
+        now = datetime(2026, 10, 25, tzinfo=timezone.utc)
+        event = fixture(name='<img src=x onerror=alert(1)>')
+        event['blockName'] = '<script>alert(1)</script>'
+        state, _ = sync.merge({}, [event], now)
+        html = sync.make_schedule(state)
+        self.assertNotIn('<script>', html)
+        self.assertNotIn('<img', html)
+        self.assertIn('&lt;img', html)
+        self.assertIn('&lt;script&gt;', html)

@@ -32,3 +32,5 @@ Nie edytuj generowanego `site/index.html` — kolejne wdrożenie go zastąpi. Na
 Sekcja „Co zobaczysz w swoim kalendarzu?” korzysta z kluczy `insideTitle`, `insideGuide`, `spoilerNotice`, `exampleLabel`, `exampleOpen`, `exampleDetails` i `refreshNotice` w obu wersjach `strings`. Przykład musi pozostać wyraźnie oznaczony jako poglądowy.
 
 Zrzut kalendarza znajduje się w `assets/calendar-example.jpg`; generator kopiuje go do publikowanej strony. `exampleImage` zmienia opis alternatywny, a `exampleOpen` podpis rozwijanego podglądu.
+
+FAQ znajduje się na tej samej stronie pod terminarzem. Tytuł i link do sekcji to `faqTitle` i `faqLink`, a pytania i odpowiedzi to `faqQ1`…`faqQ7` oraz `faqA1`…`faqA7`. Zmieniaj je w obu wersjach językowych; domyślna angielska treść FAQ jest również obecna w HTML dla działania bez JavaScriptu.

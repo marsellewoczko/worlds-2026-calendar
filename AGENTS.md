@@ -1,6 +1,6 @@
 # Working on Worlds 2026 Calendar
 
-- Keep the product minimal, bilingual (PL/EN), mobile-friendly and clearly unofficial.
+- Keep the product minimal, bilingual (PL/EN), mobile-friendly and clearly unofficial. Keep the calendar, FAQ and instructions on the existing single page; do not create additional product pages unless the owner explicitly changes this requirement.
 - Never invent production matches. Test fixtures belong in tests only. Preserve the last successful schedule on source or validation failure.
 - Keep stable event UIDs and increment SEQUENCE only for changed event data. Never infer cancellation from omission in a rolling API page.
 - Use Python 3.12 and the standard library for the sync job. Run `python -m unittest discover -s tests -v` after backend changes. Exercise real API generation when access permits, using `--state .local/events.json --site .local/site` to avoid changing the published snapshot.

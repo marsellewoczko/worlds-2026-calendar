@@ -15,12 +15,13 @@
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;background:#0a1220;color:#f2f5fa}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#1e3b55 0,transparent 55%),#0a1220;min-height:100vh}main{max-width:920px;padding:30px 22px 90px;margin:auto}header{display:flex;justify-content:space-between;align-items:center;gap:16px}.mark{font-size:13px;font-weight:800;letter-spacing:.15em;color:#e2ba79}a{color:#ebc890;text-decoration:none}a:hover{text-decoration:underline}.language{display:flex;gap:9px}.language button{cursor:pointer;background:#7dd3c0;color:#102030;border:1px solid transparent;padding:9px 13px;border-radius:9px;font-weight:650}.language button[aria-pressed=true]{background:#e2ba79;color:#121924}h1{font-size:clamp(40px,7vw,74px);line-height:1.04;letter-spacing:-.055em;margin:75px 0 24px}h1 em{font-style:normal;color:#e2ba79}.hero-credit{font-size:14px;color:#c2cedd;margin:-8px 0 22px;line-height:1.6}.hero-credit a{font-weight:750}.lead{color:#c2cedd;font-size:18px;line-height:1.65;max-width:630px}section{border:1px solid #294059;background:rgba(19,32,49,.84);border-radius:18px;padding:28px;margin-top:25px}h2{font-size:24px;letter-spacing:-.03em;margin:5px 0 12px}.eyebrow{color:#e2ba79;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.buttons{display:flex;flex-wrap:wrap;gap:12px;margin:23px 0}.button{display:inline-block;border:0;border-radius:10px;padding:13px 18px;font-weight:750;font-size:14px;background:#e2ba79;color:#102030;text-decoration:none;cursor:pointer}.button.secondary{background:#7dd3c0;color:#102030}.button.google{background:#a5b4fc;color:#102030}.button:hover{filter:brightness(1.08);text-decoration:none}.button:focus-visible,.language button:focus-visible{outline:3px solid #fff;outline-offset:4px}.small{font-size:13px;line-height:1.65;color:#a9bbd1}.stat{display:flex;gap:22px;flex-wrap:wrap;font-size:13px;color:#a9bcd1;margin:16px 0}.stat strong{color:white}.date{margin-top:29px;font-weight:750;font-size:18px}.event{display:grid;grid-template-columns:90px 1fr auto;gap:12px;padding:16px 0;border-bottom:1px solid #2d4058;align-items:center}.time{font-variant-numeric:tabular-nums;color:#e2ba79;font-weight:750}.teams{font-weight:700}.sub{font-size:12px;color:#98adc6;margin-top:5px}.chip{font-size:12px;border:1px solid #52677c;border-radius:7px;padding:4px 8px}footer{margin-top:45px;color:#9caec4;font-size:13px;line-height:1.8;border-top:1px solid #263d54;padding-top:22px}footer .credit{font-size:16px;color:#f2f5fa;margin-bottom:10px}code{overflow-wrap:anywhere}@media(max-width:550px){h1{margin-top:58px}.event{grid-template-columns:67px 1fr}.chip{grid-column:2;justify-self:start}section{padding:20px}}
 .event-example{padding:18px;border:1px solid #466079;border-radius:12px;margin-top:16px;overflow-wrap:anywhere}.event-example p{margin:8px 0}.event-example summary{cursor:pointer;color:#ebc890;font-weight:700}.example-title{font-weight:750}.spoiler-notice{color:#f0cd94}
+.faq details{padding:17px 0;border-bottom:1px solid #2d4058}.faq details:last-child{border-bottom:0}.faq summary{cursor:pointer;font-weight:700;line-height:1.5}.faq summary:focus-visible{outline:3px solid #e2ba79;outline-offset:4px}.faq p{margin:12px 0 0}#faq{scroll-margin-top:24px}
 </style></head>
-<body><main><noscript>This schedule needs JavaScript to show local match times. Subscribe directly using <a href="calendar.ics">calendar.ics</a>. / Włącz JavaScript, aby zobaczyć godziny lokalne.</noscript><header><div class="mark">WORLDS 2026 CALENDAR</div><div class="language"><button id="en" aria-pressed="true">EN</button><button id="pl" aria-pressed="false">PL</button></div></header>
+<body><main><noscript>The schedule below uses UTC. Enable JavaScript to see times in your local timezone. Subscribe directly using <a href="calendar.ics">calendar.ics</a>. / Poniższy terminarz pokazuje czas UTC. Włącz JavaScript, aby zobaczyć godziny lokalne.</noscript><header><div class="mark">WORLDS 2026 CALENDAR</div><div class="language"><button id="en" aria-pressed="true">EN</button><button id="pl" aria-pressed="false">PL</button></div></header>
 <h1 id="headline">Every match<br><em>in your calendar.</em></h1>
 <p class="hero-credit">Created by <a href="https://marsellewoczko.com" target="_blank" rel="noopener">Marsel Lewoczko ↗</a></p>
 <p class="lead" id="lead">Subscribe to the Worlds 2026 calendar for the League of Legends World Championship. Match times and teams update automatically.</p>
-<section><h2 id="subscribeTitle">Subscribe to Worlds 2026</h2><div class="buttons"><a class="button" id="apple" href="calendar.ics">Apple Calendar / Outlook ↗</a><button class="button secondary" id="copy" aria-live="polite">Copy subscription link</button><a class="button google" href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank" rel="noopener">Google Calendar ↗</a></div><p class="small" id="guide">Google Calendar: copy the link and add it under Other calendars → From URL. Subscribe to receive updates instead of importing the file once. Calendar apps decide how frequently to refresh.</p><p class="small"><code id="feed"></code></p><div class="stat"><div><span id="matchesLabel">Matches</span>: <strong id="count">…</strong></div><div><span id="timezoneLabel">Timezone</span>: <strong id="tz">…</strong></div></div></section>
+<section><h2 id="subscribeTitle">Subscribe to Worlds 2026</h2><div class="buttons"><a class="button" id="apple" href="webcal://lolworldscalendar.com/calendar.ics">Apple Calendar / Outlook ↗</a><button class="button secondary" id="copy" aria-live="polite">Copy subscription link</button><a class="button google" href="https://calendar.google.com/calendar/u/0/r/settings/addbyurl" target="_blank" rel="noopener">Google Calendar ↗</a></div><p class="small" id="guide">Google Calendar: copy the link and add it under Other calendars → From URL. Subscribe to receive updates instead of importing the file once. Calendar apps decide how frequently to refresh.</p><p class="small"><code id="feed">https://lolworldscalendar.com/calendar.ics</code></p><div class="stat"><div><span id="matchesLabel">Matches</span>: <strong id="count">%%COUNT%%</strong></div><div><span id="timezoneLabel">Timezone</span>: <strong id="tz">UTC</strong></div></div><p class="small"><a href="#faq" id="faqLink">Questions? Read the FAQ</a></p></section>
 <section aria-labelledby="insideTitle">
 <h2 id="insideTitle">What appears in your calendar?</h2>
 <p class="small" id="insideGuide">The event title shows the teams and series format. Times appear in your calendar’s timezone; end times are estimates.</p>
@@ -34,7 +35,17 @@
 </div>
 <p class="small" id="refreshNotice">The feed is scheduled to update about every 30 minutes. Your calendar app controls when it fetches changes, so scores and times may arrive later.</p>
 </section>
-<section><div class="eyebrow" id="scheduleLabel">World Championship</div><h2 id="scheduleTitle">Match schedule</h2><p class="small" id="updated">Feed last generated: %%UPDATED%%</p><div id="schedule"></div></section>
+<section><div class="eyebrow" id="scheduleLabel">World Championship</div><h2 id="scheduleTitle">Match schedule</h2><p class="small" id="updated">Feed last generated: %%UPDATED%%</p><div id="schedule">%%SCHEDULE%%</div></section>
+<section id="faq" class="faq" aria-labelledby="faqTitle">
+<h2 id="faqTitle">Frequently asked questions</h2>
+<details><summary id="faqQ1">How do I add Worlds 2026 to Google Calendar?</summary><p id="faqA1" class="small">Copy the subscription link above. In Google Calendar on the web, open Other calendars, choose From URL and paste the link. Subscribe by URL rather than importing the file once.</p></details>
+<details><summary id="faqQ2">Does it work with Apple Calendar and Outlook?</summary><p id="faqA2" class="small">Yes, the feed uses the iCalendar format. Use the Apple Calendar / Outlook button, or copy the link and choose a calendar subscription in your app. In Outlook on the web, use Add calendar, then Subscribe from web.</p></details>
+<details><summary id="faqQ3">Are match times shown in my timezone?</summary><p id="faqA3" class="small">The website uses your browser’s timezone. Your calendar app displays events according to its own timezone settings. End times are estimates based on the series format, not confirmed finish times.</p></details>
+<details><summary id="faqQ4">Will schedule changes update existing events?</summary><p id="faqA4" class="small">Yes, a URL subscription can receive team and time changes for the existing match. Event identifiers stay stable. Avoid adding the same feed multiple times or importing separate copies, which can create duplicates in your app.</p></details>
+<details><summary id="faqQ5">How often does the calendar update?</summary><p id="faqA5" class="small">The source feed is scheduled to refresh about every 30 minutes. Your calendar provider decides when to fetch it, so updates may arrive later. Live scores are snapshots from the last successful sync, not a live scoreboard.</p></details>
+<details><summary id="faqQ6">Does the calendar contain spoilers?</summary><p id="faqA6" class="small">Event titles do not include scores. Opening a match reveals its final result or the last fetched Live score in the notes, when the source provides one. Some apps may preview those notes, so check your display and notification settings if you want to avoid spoilers.</p></details>
+<details><summary id="faqQ7">Is the calendar free and official?</summary><p id="faqA7" class="small">It is free to use and created by Marsel Lewoczko as an independent fan project. It is not affiliated with or endorsed by Riot Games. Match data comes from the unofficial LoL Esports website API, whose availability and accuracy are outside this project’s control.</p></details>
+</section>
 <footer><div class="credit"><span id="credit">Created by</span> <a href="https://marsellewoczko.com" target="_blank" rel="noopener"><strong>Marsel Lewoczko ↗</strong></a></div><p id="portfolio">Explore my other projects at marsellewoczko.com.</p><p id="disclaimer">Independent fan project. Not affiliated with or endorsed by Riot Games. Match information is sourced from the LoL Esports schedule; times can change. Match end times in the calendar are estimates.</p><a href="https://lolesports.com/en-US" target="_blank" rel="noopener">LoL Esports ↗</a></footer></main>
 <script type="application/json" id="data">%%EVENTS%%</script>
 <script>
@@ -47,6 +58,23 @@ document.getElementById('tz').textContent=Intl.DateTimeFormat().resolvedOptions(
 document.getElementById('copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(feed);document.getElementById('copy').textContent=lang==='pl'?'Skopiowano ✓':'Copied ✓'}catch{prompt(lang==='pl'?'Skopiuj adres URL:':'Copy URL:',feed)}});
 const strings={
 en: {
+  faqTitle:"Frequently asked questions",
+  faqLink:"Questions? Read the FAQ",
+  faqQ1:"How do I add Worlds 2026 to Google Calendar?",
+  faqA1:"Copy the subscription link above. In Google Calendar on the web, open Other calendars, choose From URL and paste the link. Subscribe by URL rather than importing the file once.",
+  faqQ2:"Does it work with Apple Calendar and Outlook?",
+  faqA2:"Yes, the feed uses the iCalendar format. Use the Apple Calendar / Outlook button, or copy the link and choose a calendar subscription in your app. In Outlook on the web, use Add calendar, then Subscribe from web.",
+  faqQ3:"Are match times shown in my timezone?",
+  faqA3:"The website uses your browser’s timezone. Your calendar app displays events according to its own timezone settings. End times are estimates based on the series format, not confirmed finish times.",
+  faqQ4:"Will schedule changes update existing events?",
+  faqA4:"Yes, a URL subscription can receive team and time changes for the existing match. Event identifiers stay stable. Avoid adding the same feed multiple times or importing separate copies, which can create duplicates in your app.",
+  faqQ5:"How often does the calendar update?",
+  faqA5:"The source feed is scheduled to refresh about every 30 minutes. Your calendar provider decides when to fetch it, so updates may arrive later. Live scores are snapshots from the last successful sync, not a live scoreboard.",
+  faqQ6:"Does the calendar contain spoilers?",
+  faqA6:"Event titles do not include scores. Opening a match reveals its final result or the last fetched Live score in the notes, when the source provides one. Some apps may preview those notes, so check your display and notification settings if you want to avoid spoilers.",
+  faqQ7:"Is the calendar free and official?",
+  faqA7:"It is free to use and created by Marsel Lewoczko as an independent fan project. It is not affiliated with or endorsed by Riot Games. Match data comes from the unofficial LoL Esports website API, whose availability and accuracy are outside this project’s control.",
+
   exampleImage:"Calendar event screenshot: match title and time above, result in Notes, author credit at the bottom.",
   insideTitle:"What appears in your calendar?",
   insideGuide:"The event title shows the teams and series format. Times appear in your calendar’s timezone; end times are estimates.",
@@ -72,6 +100,23 @@ en: {
   updated:'Feed last generated: %%UPDATED%%'
 },
 pl: {
+  faqTitle:"Najczęstsze pytania",
+  faqLink:"Masz pytania? Zobacz FAQ",
+  faqQ1:"Jak dodać Worlds 2026 do Kalendarza Google?",
+  faqA1:"Skopiuj link subskrypcji powyżej. W internetowej wersji Kalendarza Google otwórz Inne kalendarze, wybierz Z adresu URL i wklej link. Dodaj subskrypcję zamiast jednorazowego importu pliku.",
+  faqQ2:"Czy kalendarz działa w Apple Calendar i Outlook?",
+  faqA2:"Tak, plik korzysta z formatu iCalendar. Użyj przycisku Kalendarz Apple / Outlook albo skopiuj link i dodaj subskrypcję w swojej aplikacji. W internetowym Outlooku wybierz Dodaj kalendarz, a następnie Subskrybuj z sieci Web.",
+  faqQ3:"Czy godziny meczów są w mojej strefie czasowej?",
+  faqA3:"Strona korzysta ze strefy czasowej przeglądarki. Aplikacja kalendarza wyświetla wydarzenia według własnych ustawień strefy. Godziny zakończenia są szacowane na podstawie formatu serii, nie są potwierdzonym czasem końca meczu.",
+  faqQ4:"Czy zmiany terminarza aktualizują istniejące wydarzenia?",
+  faqA4:"Tak, subskrypcja adresu URL może pobierać zmiany drużyn i godzin w istniejącym meczu. Identyfikatory wydarzeń pozostają stałe. Nie dodawaj tej samej subskrypcji kilka razy ani nie importuj osobnych kopii, bo może to tworzyć duplikaty w aplikacji.",
+  faqQ5:"Jak często kalendarz się aktualizuje?",
+  faqA5:"Źródłowy plik ma zaplanowane odświeżanie co około 30 minut. Dostawca Twojego kalendarza decyduje, kiedy go pobierze, więc zmiany mogą dotrzeć później. Wynik Live pochodzi z ostatniej udanej synchronizacji, nie jest relacją na żywo.",
+  faqQ6:"Czy kalendarz zawiera spoilery?",
+  faqA6:"Tytuły wydarzeń nie zawierają wyników. Po otwarciu meczu w notatce zobaczysz wynik końcowy lub ostatnio pobrany wynik Live, jeśli źródło go udostępnia. Niektóre aplikacje pokazują podgląd notatek, więc sprawdź ustawienia widoku i powiadomień, jeśli chcesz uniknąć spoilerów.",
+  faqQ7:"Czy kalendarz jest bezpłatny i oficjalny?",
+  faqA7:"Kalendarz jest bezpłatny. Stworzył go Marsel Lewoczko jako niezależny projekt fanowski, niepowiązany z Riot Games. Dane pochodzą z nieoficjalnego API strony LoL Esports, a projekt nie ma wpływu na jego dostępność i poprawność.",
+
   exampleImage:"Zrzut wydarzenia w kalendarzu: tytuł i godzina u góry, wynik w notatkach, podpis autora na dole.",
   insideTitle:"Co zobaczysz w swoim kalendarzu?",
   insideGuide:"Tytuł wydarzenia zawiera drużyny i format serii. Godziny wyświetlają się w strefie Twojego kalendarza; czas zakończenia jest szacunkowy.",

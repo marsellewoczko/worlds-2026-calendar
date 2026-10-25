@@ -29,3 +29,7 @@ Keep event titles and visible website rows free of scores. Put explicit series g
 ## 2026-10-24 — Source attribution and event text revisions
 
 Per owner request, retain LoL Esports attribution/link on the website and remove it from calendar notes and the ICS URL property. Add a persisted event format version to trigger exactly one SEQUENCE increment for an event text format change; keep UIDs unchanged. Future rendered event changes should bump this version so existing subscribers can receive them even when source match data is unchanged.
+
+## 2026-10-25 — One page, accessible initial schedule and FAQ
+
+Keep subscription, instructions, match schedule and FAQ on one canonical page per the owner's request. Use a fragment link to reach FAQ rather than another route. Native details/summary works with keyboard and without JavaScript. English FAQ and escaped UTC match rows are emitted in initial HTML; the existing client rendering upgrades times to the browser timezone and translates the interface. Initial UTC labels are explicit, so no visitor receives an unlabelled server-local time. Scores remain in ICS notes and do not appear in schedule rows. No FAQ rich-result eligibility is promised.

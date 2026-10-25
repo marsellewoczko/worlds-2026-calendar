@@ -286,10 +286,40 @@ def make_ics(state):
     return "\r\n".join(folded(line) for line in lines) + "\r\n"
 
 
+def make_schedule(state):
+    """Usable initial HTML; JavaScript upgrades UTC times to local times."""
+    rows = []
+    previous_day = None
+    states = {"completed": "Completed", "inProgress": "Live",
+              "cancelled": "Cancelled", "canceled": "Cancelled"}
+    for event in ordered(state):
+        start = parse_time(event["start"])
+        day = start.date()
+        if day != previous_day:
+            rows.append(f'<div class="date"><time datetime="{day.isoformat()}">'
+                        f'{start.strftime("%A, %d %B %Y")}</time> (UTC)</div>')
+            previous_day = day
+        label = f'Bo{event["best_of"]}'
+        if event["state"] in states:
+            label += " · " + states[event["state"]]
+        rows.append(
+            '<div class="event"><div class="time">'
+            f'<time datetime="{escape(event["start"], quote=True)}">{start:%H:%M} UTC</time>'
+            '</div><div><div class="teams">'
+            f'{escape(event["team1"])} vs {escape(event["team2"])}'
+            f'</div><div class="sub">{escape(event["stage"])}</div></div>'
+            f'<span class="chip">{escape(label)}</span></div>'
+        )
+    return "\n".join(rows)
+
+
 def make_html(state, current):
     template = (ROOT / "template.html").read_text(encoding="utf-8")
     data = json.dumps(ordered(state), ensure_ascii=False).replace("<", "\\u003c").replace(">", "\\u003e").replace("&", "\\u0026").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
-    return template.replace("%%EVENTS%%", data).replace("%%UPDATED%%", escape(current.strftime("%d %b %Y, %H:%M UTC")))
+    return (template.replace("%%SCHEDULE%%", make_schedule(state))
+            .replace("%%COUNT%%", str(len(state)))
+            .replace("%%EVENTS%%", data)
+            .replace("%%UPDATED%%", escape(current.strftime("%d %b %Y, %H:%M UTC"))))
 
 
 def atomic_write(path, content):

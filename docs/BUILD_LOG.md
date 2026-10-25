@@ -1,5 +1,7 @@
 # Build log
 
+Entries record observations at the time of each step. Historical waiting states and failed checks are followed by their later resolution; see PROJECT_STATUS.md for current readiness.
+
 ## 2026-10-23 — Audit
 
 - Inspected sync.py, template.html, both original tests and deployment workflow, README, empty production state and the seven existing commits.
@@ -156,3 +158,11 @@
 - Owner provided Search Console URL Inspection evidence for https://lolworldscalendar.com/: URL is on Google, Page is indexed, successful fetch by Googlebot smartphone, crawling/indexing allowed and HTTPS served.
 - Google-selected canonical is the inspected HTTPS apex, matching the declared canonical. Sitemap association is shown.
 - Updated status and search documentation. This establishes a publicly deployed product indexed by Google; no query ranking, traffic or user-adoption metrics are inferred. Next step: monitor Search Console Performance for the target query, impressions and clicks. Documentation-only change, no application tests needed.
+
+## 2026-10-25 — FAQ, initial HTML schedule and public repository review
+
+- Added seven PL/EN FAQ entries below the schedule and a subscription-section fragment link. Google subscription, Apple/Outlook, timezone, event updates, refresh cadence, spoilers and independent/free status are covered. No additional product routes were created; single-page requirement is saved in AGENTS.md.
+- Initial HTML includes escaped match rows, UTC labels, event count and subscription URL. JavaScript replaces rows with local times. Added tests for correct UTC timestamps, title spoiler avoidance and source escaping; all 31 tests passed.
+- Chromium smoke checks passed for mobile/desktop, PL/EN, timezone conversion, clipboard and blocked storage. Specific checks passed for FAQ anchor, keyboard disclosure and seven translated questions. With JavaScript disabled, 46 UTC events, correct count/timezone, usable FAQ and feed link were verified.
+- Reviewed public repository contents and scanned 19 tracked files plus 145 reachable historical blobs for common private-key/token patterns. No matches or tracked environment/credential files found. No TODO/FIXME/debug leftovers found. Intentional technical comments, tests and the public LoL Esports website key remain. This was a targeted review, not a full security audit.
+- Updated README and replaced accumulated status fragments with a concise current report. BUILD_LOG preserves earlier observations with a note distinguishing historical states from current readiness. No history rewrite or deletion of prior records was performed.
