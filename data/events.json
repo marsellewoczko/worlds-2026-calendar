@@ -323,16 +323,15 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095049",
-    "last_modified": "2026-10-26T17:36:16Z",
+    "last_modified": "2026-10-26T18:13:06Z",
     "score": [
-      0,
+      1,
       0
     ],
-    "score_checked_at": "2026-10-26T17:36:16Z",
-    "sequence": 4,
+    "sequence": 5,
     "stage": "Swiss",
     "start": "2026-10-26T17:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "T1",
     "team2": "CFO"
   },
@@ -340,11 +339,16 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095051",
-    "last_modified": "2026-10-25T02:02:28Z",
-    "sequence": 3,
+    "last_modified": "2026-10-26T18:13:06Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-10-26T18:13:06Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-26T18:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "BLG",
     "team2": "KC"
   },
