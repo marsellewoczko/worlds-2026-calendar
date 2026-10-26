@@ -371,16 +371,15 @@
     "best_of": 3,
     "format_version": 3,
     "id": "115660540726095057",
-    "last_modified": "2026-10-26T22:35:12Z",
+    "last_modified": "2026-10-26T23:06:08Z",
     "score": [
       0,
-      1
+      2
     ],
-    "score_checked_at": "2026-10-26T22:35:12Z",
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-26T22:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "AL",
     "team2": "TLAW"
   },
