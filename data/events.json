@@ -371,13 +371,13 @@
     "best_of": 3,
     "format_version": 3,
     "id": "115660540726095057",
-    "last_modified": "2026-10-26T22:04:59Z",
+    "last_modified": "2026-10-26T22:35:12Z",
     "score": [
       0,
       1
     ],
-    "score_checked_at": "2026-10-26T22:04:59Z",
-    "sequence": 5,
+    "score_checked_at": "2026-10-26T22:35:12Z",
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-26T22:00:00Z",
     "state": "inProgress",
