@@ -323,13 +323,18 @@
     "best_of": 1,
     "format_version": 3,
     "id": "115660540726095049",
-    "last_modified": "2026-10-25T02:02:28Z",
-    "sequence": 3,
+    "last_modified": "2026-10-26T17:36:16Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-10-26T17:36:16Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-26T17:00:00Z",
-    "state": "unstarted",
-    "team1": "CFO",
-    "team2": "T1"
+    "state": "inProgress",
+    "team1": "T1",
+    "team2": "CFO"
   },
   "115660540726095051": {
     "best_of": 1,
