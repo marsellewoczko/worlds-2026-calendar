@@ -1,4 +1,4 @@
-# Project status — 2026-10-25
+# Project status — 2026-10-27
 
 ## Product
 
@@ -25,3 +25,5 @@
 - Unofficial source availability, changed source IDs, calendar-provider refresh cadence and estimated durations remain limitations. A URL subscription is required instead of one-time import.
 - Actual Google/Apple/Outlook account refresh is a user acceptance check. Creator-authorized recap links and removing score notes are proposals only; no creator permission or integration is claimed.
 - Monitor scheduled sync and Search Console Performance. Keep FAQ, instructions and schedule together on this single page.
+
+- Latest note change: Imported from https://lolworldscalendar.com/ replaces author credit in ICS only. Version 4 refreshes existing events; 31 tests and live local generation passed.

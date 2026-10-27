@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parent
 SITE = ROOT / "site"
 STATE = ROOT / "data" / "events.json"
 # Bump when rendered event text changes, so existing subscriptions update once.
-EVENT_FORMAT_VERSION = 3
+EVENT_FORMAT_VERSION = 4
 BASE = "https://esports-api.lolesports.com/persisted/gw"
 # Key used by the public LoL Esports website, NOT a personal API credential.
 WEB_KEY = "0TvQnueqKa5mxJntVWt0w4LpLfEkrV1Ta8rQBb9Z"
@@ -266,7 +266,7 @@ def make_ics(state):
                            f'Ostatnie pobranie / Last fetched: {checked}.\n'
                            'Wynik z ostatniej synchronizacji, nie w czasie rzeczywistym. / '
                            'Score from the last sync, not a real-time feed.\n\n') + detail
-        detail += '\n\nCreated by Marsel Lewoczko — https://marsellewoczko.com'
+        detail += '\n\nImported from https://lolworldscalendar.com/'
         canceled = event["state"].lower() in ("cancelled", "canceled")
         lines.extend([
             "BEGIN:VEVENT",

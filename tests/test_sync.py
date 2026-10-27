@@ -14,7 +14,7 @@ class CalendarTests(TestCase):
         self.assertEqual(first["11"]["sequence"],0)
         self.assertEqual(later["11"]["sequence"],1)
         self.assertIn("UID:worlds2026-riot-11@marsellewoczko.com",sync.make_ics(later))
-        self.assertIn("Created by Marsel Lewoczko",sync.make_ics(later).replace("\r\n ", ""))
+        self.assertIn("Imported from https://lolworldscalendar.com/",sync.make_ics(later).replace("\r\n ", ""))
 
     def test_empty_api_fails_closed(self):
         with self.assertRaises(RuntimeError):
@@ -252,7 +252,7 @@ class ScoreNotesTests(TestCase):
                 self.assertTrue(description.startswith('DESCRIPTION:Wynik końcowy / Final result:'))
             elif event.get('state') == 'inProgress':
                 self.assertTrue(description.startswith('DESCRIPTION:Live:'))
-            self.assertTrue(description.endswith('\\n\\nCreated by Marsel Lewoczko — https://marsellewoczko.com'))
+            self.assertTrue(description.endswith('\\n\\nImported from https://lolworldscalendar.com/'))
 
 class SiteBuildTests(TestCase):
     def test_build_publishes_consistent_crawl_metadata_and_calendar(self):

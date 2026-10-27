@@ -168,3 +168,9 @@ Entries record observations at the time of each step. Historical waiting states 
 - Updated README and replaced accumulated status fragments with a concise current report. BUILD_LOG preserves earlier observations with a note distinguishing historical states from current readiness. No history rewrite or deletion of prior records was performed.
 
 - CI and publish run [40199501228](https://github.com/marsellewoczko/worlds-2026-calendar/actions/runs/40199501228) succeeded. Public HTML returned 200 and contained all 46 initial UTC event rows, seven FAQ questions and correct initial timezone/count with no schedule placeholder. The single-page changes are deployed.
+
+## 2026-10-27 — Link calendar notes back to the product
+
+- Replaced the final Created by author line in ICS notes with Imported from https://lolworldscalendar.com/. A full HTTPS URL allows calendar clients to recognize the link without HTML-specific extensions. Website author branding is unchanged.
+- Incremented event format version from 3 to 4 so existing events receive the changed text with stable UIDs and increased SEQUENCE.
+- All 31 unit/integration tests passed. A live local API build produced 46 notes ending with the new source link. Verified one-time sequence migration on the saved 46 events. Deployment verification follows publication.
