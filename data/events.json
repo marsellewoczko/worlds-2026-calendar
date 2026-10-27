@@ -1,14 +1,14 @@
 {
   "115660540726095005": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095005",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-23T17:00:00Z",
     "state": "completed",
@@ -17,14 +17,14 @@
   },
   "115660540726095007": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095007",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-23T22:00:00Z",
     "state": "completed",
@@ -33,14 +33,14 @@
   },
   "115660540726095009": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095009",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-23T20:00:00Z",
     "state": "completed",
@@ -49,14 +49,14 @@
   },
   "115660540726095011": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095011",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-23T21:00:00Z",
     "state": "completed",
@@ -65,14 +65,14 @@
   },
   "115660540726095013": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095013",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-23T18:00:00Z",
     "state": "completed",
@@ -81,14 +81,14 @@
   },
   "115660540726095015": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095015",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-23T23:00:00Z",
     "state": "completed",
@@ -97,14 +97,14 @@
   },
   "115660540726095017": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095017",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-24T00:00:00Z",
     "state": "completed",
@@ -113,14 +113,14 @@
   },
   "115660540726095019": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095019",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-23T19:00:00Z",
     "state": "completed",
@@ -129,14 +129,14 @@
   },
   "115660540726095021": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095021",
-    "last_modified": "2026-10-24T19:01:39Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 7,
+    "sequence": 8,
     "stage": "Swiss",
     "start": "2026-10-24T18:00:00Z",
     "state": "completed",
@@ -145,14 +145,14 @@
   },
   "115660540726095023": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095023",
-    "last_modified": "2026-10-24T21:24:59Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-24T20:00:00Z",
     "state": "completed",
@@ -161,14 +161,14 @@
   },
   "115660540726095025": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095025",
-    "last_modified": "2026-10-24T23:22:01Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-24T22:00:00Z",
     "state": "completed",
@@ -177,14 +177,14 @@
   },
   "115660540726095027": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095027",
-    "last_modified": "2026-10-25T00:33:49Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-24T23:00:00Z",
     "state": "completed",
@@ -193,14 +193,14 @@
   },
   "115660540726095029": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095029",
-    "last_modified": "2026-10-24T18:10:21Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 7,
+    "sequence": 8,
     "stage": "Swiss",
     "start": "2026-10-24T17:00:00Z",
     "state": "completed",
@@ -209,14 +209,14 @@
   },
   "115660540726095031": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095031",
-    "last_modified": "2026-10-24T20:23:35Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 7,
+    "sequence": 8,
     "stage": "Swiss",
     "start": "2026-10-24T19:00:00Z",
     "state": "completed",
@@ -225,14 +225,14 @@
   },
   "115660540726095033": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095033",
-    "last_modified": "2026-10-24T22:23:56Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-24T21:00:00Z",
     "state": "completed",
@@ -241,14 +241,14 @@
   },
   "115660540726095035": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095035",
-    "last_modified": "2026-10-25T02:02:28Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       1
     ],
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-25T00:00:00Z",
     "state": "completed",
@@ -257,14 +257,14 @@
   },
   "115660540726095037": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095037",
-    "last_modified": "2026-10-25T20:57:45Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       2
     ],
-    "sequence": 8,
+    "sequence": 9,
     "stage": "Swiss",
     "start": "2026-10-25T19:00:00Z",
     "state": "completed",
@@ -273,14 +273,14 @@
   },
   "115660540726095041": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095041",
-    "last_modified": "2026-10-25T23:22:44Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       2
     ],
-    "sequence": 9,
+    "sequence": 10,
     "stage": "Swiss",
     "start": "2026-10-25T22:00:00Z",
     "state": "completed",
@@ -289,14 +289,14 @@
   },
   "115660540726095045": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095045",
-    "last_modified": "2026-10-25T17:55:34Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-25T17:00:00Z",
     "state": "completed",
@@ -305,14 +305,14 @@
   },
   "115660540726095047": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095047",
-    "last_modified": "2026-10-25T19:03:07Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 7,
+    "sequence": 8,
     "stage": "Swiss",
     "start": "2026-10-25T18:00:00Z",
     "state": "completed",
@@ -321,14 +321,14 @@
   },
   "115660540726095049": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095049",
-    "last_modified": "2026-10-26T18:13:06Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-26T17:00:00Z",
     "state": "completed",
@@ -337,14 +337,14 @@
   },
   "115660540726095051": {
     "best_of": 1,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095051",
-    "last_modified": "2026-10-26T19:19:41Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       1,
       0
     ],
-    "sequence": 5,
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-26T18:00:00Z",
     "state": "completed",
@@ -353,14 +353,14 @@
   },
   "115660540726095053": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095053",
-    "last_modified": "2026-10-26T21:07:42Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       2
     ],
-    "sequence": 7,
+    "sequence": 8,
     "stage": "Swiss",
     "start": "2026-10-26T19:00:00Z",
     "state": "completed",
@@ -369,14 +369,14 @@
   },
   "115660540726095057": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095057",
-    "last_modified": "2026-10-26T23:06:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       0,
       2
     ],
-    "sequence": 7,
+    "sequence": 8,
     "stage": "Swiss",
     "start": "2026-10-26T22:00:00Z",
     "state": "completed",
@@ -385,10 +385,10 @@
   },
   "115660540726095061": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095061",
-    "last_modified": "2026-10-26T23:31:50Z",
-    "sequence": 3,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-28T20:00:00Z",
     "state": "unstarted",
@@ -397,10 +397,10 @@
   },
   "115660540726095065": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095065",
-    "last_modified": "2026-10-26T23:31:50Z",
-    "sequence": 3,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-28T23:00:00Z",
     "state": "unstarted",
@@ -409,10 +409,10 @@
   },
   "115660540726095069": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095069",
-    "last_modified": "2026-10-26T23:31:50Z",
-    "sequence": 3,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-29T23:00:00Z",
     "state": "unstarted",
@@ -421,10 +421,10 @@
   },
   "115660540726095073": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095073",
-    "last_modified": "2026-10-26T23:31:50Z",
-    "sequence": 3,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-29T20:00:00Z",
     "state": "unstarted",
@@ -433,10 +433,10 @@
   },
   "115660540726095077": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095077",
-    "last_modified": "2026-10-26T23:31:50Z",
-    "sequence": 3,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-30T20:00:00Z",
     "state": "unstarted",
@@ -445,10 +445,10 @@
   },
   "115660540726095081": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095081",
-    "last_modified": "2026-10-26T23:31:50Z",
-    "sequence": 3,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-30T23:00:00Z",
     "state": "unstarted",
@@ -457,10 +457,10 @@
   },
   "115660540726095085": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095085",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Swiss",
     "start": "2026-10-31T17:00:00Z",
     "state": "unstarted",
@@ -469,10 +469,10 @@
   },
   "115660540726095089": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095089",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Swiss",
     "start": "2026-10-31T20:00:00Z",
     "state": "unstarted",
@@ -481,10 +481,10 @@
   },
   "115660540726095093": {
     "best_of": 3,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095093",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Swiss",
     "start": "2026-10-31T23:00:00Z",
     "state": "unstarted",
@@ -493,10 +493,10 @@
   },
   "115660540726095097": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095097",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Quarterfinals",
     "start": "2026-11-03T22:00:00Z",
     "state": "unstarted",
@@ -505,10 +505,10 @@
   },
   "115660540726095103": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095103",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Quarterfinals",
     "start": "2026-11-04T22:00:00Z",
     "state": "unstarted",
@@ -517,10 +517,10 @@
   },
   "115660540726095109": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095109",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Quarterfinals",
     "start": "2026-11-05T22:00:00Z",
     "state": "unstarted",
@@ -529,10 +529,10 @@
   },
   "115660540726095115": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095115",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Quarterfinals",
     "start": "2026-11-06T22:00:00Z",
     "state": "unstarted",
@@ -541,10 +541,10 @@
   },
   "115660540726095121": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095121",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Semifinals",
     "start": "2026-11-07T22:00:00Z",
     "state": "unstarted",
@@ -553,10 +553,10 @@
   },
   "115660540726095127": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095127",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Semifinals",
     "start": "2026-11-08T22:00:00Z",
     "state": "unstarted",
@@ -565,10 +565,10 @@
   },
   "115660540726095133": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660540726095133",
-    "last_modified": "2026-10-24T18:00:08Z",
-    "sequence": 2,
+    "last_modified": "2026-10-27T08:52:42Z",
+    "sequence": 3,
     "stage": "Finals",
     "start": "2026-11-14T19:00:00Z",
     "state": "unstarted",
@@ -577,14 +577,14 @@
   },
   "115660588583040710": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660588583040710",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       3,
       0
     ],
-    "sequence": 3,
+    "sequence": 4,
     "stage": "Play-Ins",
     "start": "2026-10-15T23:00:00Z",
     "state": "completed",
@@ -593,14 +593,14 @@
   },
   "115660588583171786": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660588583171786",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       3,
       2
     ],
-    "sequence": 3,
+    "sequence": 4,
     "stage": "Play-Ins",
     "start": "2026-10-15T18:00:00Z",
     "state": "completed",
@@ -609,14 +609,14 @@
   },
   "115660588583171790": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660588583171790",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       3,
       0
     ],
-    "sequence": 3,
+    "sequence": 4,
     "stage": "Play-Ins",
     "start": "2026-10-16T18:00:00Z",
     "state": "completed",
@@ -625,14 +625,14 @@
   },
   "115660588583171794": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660588583171794",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       3,
       1
     ],
-    "sequence": 3,
+    "sequence": 4,
     "stage": "Play-Ins",
     "start": "2026-10-16T23:00:00Z",
     "state": "completed",
@@ -641,14 +641,14 @@
   },
   "115660588583171798": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "115660588583171798",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       3,
       1
     ],
-    "sequence": 3,
+    "sequence": 4,
     "stage": "Play-Ins",
     "start": "2026-10-17T18:00:00Z",
     "state": "completed",
@@ -657,14 +657,14 @@
   },
   "116299649498303884": {
     "best_of": 5,
-    "format_version": 3,
+    "format_version": 4,
     "id": "116299649498303884",
-    "last_modified": "2026-10-24T18:00:08Z",
+    "last_modified": "2026-10-27T08:52:42Z",
     "score": [
       3,
       0
     ],
-    "sequence": 3,
+    "sequence": 4,
     "stage": "Play-Ins",
     "start": "2026-10-18T18:00:00Z",
     "state": "completed",
