@@ -26,4 +26,4 @@
 - Actual Google/Apple/Outlook account refresh is a user acceptance check. Creator-authorized recap links and removing score notes are proposals only; no creator permission or integration is claimed.
 - Monitor scheduled sync and Search Console Performance. Keep FAQ, instructions and schedule together on this single page.
 
-- Latest note change: Imported from https://lolworldscalendar.com/ replaces author credit in ICS only. Version 4 refreshes existing events; 31 tests and live local generation passed.
+- Latest note change: Imported from https://lolworldscalendar.com/ replaces author credit in ICS only. Version 4 refreshes existing events; 31 tests and live local generation passed. Publication run 40476579855 succeeded; all 46 public notes and sequence updates are verified.

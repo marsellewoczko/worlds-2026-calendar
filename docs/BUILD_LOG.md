@@ -174,3 +174,5 @@ Entries record observations at the time of each step. Historical waiting states 
 - Replaced the final Created by author line in ICS notes with Imported from https://lolworldscalendar.com/. A full HTTPS URL allows calendar clients to recognize the link without HTML-specific extensions. Website author branding is unchanged.
 - Incremented event format version from 3 to 4 so existing events receive the changed text with stable UIDs and increased SEQUENCE.
 - All 31 unit/integration tests passed. A live local API build produced 46 notes ending with the new source link. Verified one-time sequence migration on the saved 46 events. Deployment verification follows publication.
+
+- Publish run 40476579855 succeeded. Public HTTPS ICS returned 200; all 46 notes now end with Imported from https://lolworldscalendar.com/. Compared with the previous saved snapshot, UIDs remain unchanged and all SEQUENCE values increased. No Created by text remains in the feed. Calendar-provider refresh timing is outside the server’s control.
