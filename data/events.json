@@ -387,13 +387,18 @@
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095061",
-    "last_modified": "2026-10-27T08:52:42Z",
-    "sequence": 4,
+    "last_modified": "2026-10-28T20:39:06Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-10-28T20:39:06Z",
+    "sequence": 5,
     "stage": "Swiss",
     "start": "2026-10-28T20:00:00Z",
-    "state": "unstarted",
-    "team1": "MKOI",
-    "team2": "T1"
+    "state": "inProgress",
+    "team1": "T1",
+    "team2": "MKOI"
   },
   "115660540726095065": {
     "best_of": 3,
