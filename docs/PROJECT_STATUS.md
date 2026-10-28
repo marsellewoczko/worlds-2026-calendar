@@ -28,4 +28,4 @@
 
 - Latest note change: Imported from https://lolworldscalendar.com/ replaces author credit in ICS only. Version 4 refreshes existing events; 31 tests and live local generation passed. Publication run 40476579855 succeeded; all 46 public notes and sequence updates are verified.
 
-- Preview updated locally to the latest cropped screenshot showing Imported from lolworldscalendar.com; image loading/layout and PL/EN descriptions verified in Chromium.
+- Preview updated to the latest cropped screenshot showing Imported from lolworldscalendar.com; image loading/layout and PL/EN descriptions verified in Chromium. GitHub Pages deployment 40710873601 succeeded. Direct public-domain verification was blocked by this instance’s network policy.
