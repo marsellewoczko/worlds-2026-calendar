@@ -176,3 +176,9 @@ Entries record observations at the time of each step. Historical waiting states 
 - All 31 unit/integration tests passed. A live local API build produced 46 notes ending with the new source link. Verified one-time sequence migration on the saved 46 events. Deployment verification follows publication.
 
 - Publish run 40476579855 succeeded. Public HTTPS ICS returned 200; all 46 notes now end with Imported from https://lolworldscalendar.com/. Compared with the previous saved snapshot, UIDs remain unchanged and all SEQUENCE values increased. No Created by text remains in the feed. Calendar-provider refresh timing is outside the server’s control.
+
+## 2026-10-28 — Updated preview with current imported-from footer
+
+- Replaced the preview with the owner's latest cropped TES vs HLE screenshot (940×1280), preserving the supplied original. Updated image dimensions and URL version for cache refresh.
+- Updated PL/EN alt text and explanation to describe the source website link visible at the bottom, matching current event notes. The image stays behind the existing spoiler disclosure.
+- Chromium checks passed in PL/EN at mobile/desktop widths: new image loads at its actual dimensions, disclosure works, schedule row count is preserved and no horizontal overflow occurs. Publication pending.
