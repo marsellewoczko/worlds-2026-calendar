@@ -403,16 +403,15 @@
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095065",
-    "last_modified": "2026-10-29T00:05:08Z",
+    "last_modified": "2026-10-29T00:52:32Z",
     "score": [
       1,
-      1
+      2
     ],
-    "score_checked_at": "2026-10-29T00:05:08Z",
-    "sequence": 7,
+    "sequence": 8,
     "stage": "Swiss",
     "start": "2026-10-28T23:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "LYON",
     "team2": "IG"
   },
