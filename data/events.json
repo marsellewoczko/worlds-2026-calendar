@@ -451,13 +451,18 @@
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095077",
-    "last_modified": "2026-10-27T08:52:42Z",
-    "sequence": 4,
+    "last_modified": "2026-10-30T20:17:13Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-10-30T20:17:13Z",
+    "sequence": 5,
     "stage": "Swiss",
     "start": "2026-10-30T20:00:00Z",
-    "state": "unstarted",
-    "team1": "TLAW",
-    "team2": "LOS"
+    "state": "inProgress",
+    "team1": "LOS",
+    "team2": "TLAW"
   },
   "115660540726095081": {
     "best_of": 3,
