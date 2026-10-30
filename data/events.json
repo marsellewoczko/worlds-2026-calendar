@@ -451,13 +451,13 @@
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095077",
-    "last_modified": "2026-10-30T20:17:13Z",
+    "last_modified": "2026-10-30T21:12:31Z",
     "score": [
-      0,
+      1,
       0
     ],
-    "score_checked_at": "2026-10-30T20:17:13Z",
-    "sequence": 5,
+    "score_checked_at": "2026-10-30T21:12:31Z",
+    "sequence": 6,
     "stage": "Swiss",
     "start": "2026-10-30T20:00:00Z",
     "state": "inProgress",
