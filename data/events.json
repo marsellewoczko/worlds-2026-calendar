@@ -419,16 +419,15 @@
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095069",
-    "last_modified": "2026-10-30T00:55:47Z",
+    "last_modified": "2026-10-30T01:55:12Z",
     "score": [
       1,
-      1
+      2
     ],
-    "score_checked_at": "2026-10-30T00:55:47Z",
-    "sequence": 8,
+    "sequence": 9,
     "stage": "Swiss",
     "start": "2026-10-29T23:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "BLG",
     "team2": "TES"
   },
