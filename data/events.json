@@ -483,37 +483,37 @@
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095085",
-    "last_modified": "2026-10-27T08:52:42Z",
-    "sequence": 3,
+    "last_modified": "2026-10-31T01:53:40Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-31T17:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "MKOI",
+    "team2": "KC"
   },
   "115660540726095089": {
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095089",
-    "last_modified": "2026-10-27T08:52:42Z",
-    "sequence": 3,
+    "last_modified": "2026-10-31T01:53:40Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-31T20:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "LOS",
+    "team2": "LYON"
   },
   "115660540726095093": {
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095093",
-    "last_modified": "2026-10-27T08:52:42Z",
-    "sequence": 3,
+    "last_modified": "2026-10-31T01:53:40Z",
+    "sequence": 4,
     "stage": "Swiss",
     "start": "2026-10-31T23:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "TBD"
+    "team1": "HLE",
+    "team2": "BLG"
   },
   "115660540726095097": {
     "best_of": 5,
