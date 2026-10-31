@@ -467,16 +467,15 @@
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095081",
-    "last_modified": "2026-10-31T00:04:26Z",
+    "last_modified": "2026-10-31T00:55:45Z",
     "score": [
       0,
-      1
+      2
     ],
-    "score_checked_at": "2026-10-31T00:04:26Z",
-    "sequence": 6,
+    "sequence": 7,
     "stage": "Swiss",
     "start": "2026-10-30T23:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "G2",
     "team2": "HLE"
   },
