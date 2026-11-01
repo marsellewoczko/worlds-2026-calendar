@@ -515,16 +515,15 @@
     "best_of": 3,
     "format_version": 4,
     "id": "115660540726095093",
-    "last_modified": "2026-10-31T23:07:53Z",
+    "last_modified": "2026-11-01T00:01:50Z",
     "score": [
-      1,
+      2,
       0
     ],
-    "score_checked_at": "2026-10-31T23:07:53Z",
-    "sequence": 7,
+    "sequence": 8,
     "stage": "Swiss",
     "start": "2026-10-31T23:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "BLG",
     "team2": "HLE"
   },
