@@ -571,11 +571,16 @@
     "best_of": 5,
     "format_version": 4,
     "id": "115660540726095115",
-    "last_modified": "2026-11-01T00:56:57Z",
-    "sequence": 4,
+    "last_modified": "2026-11-04T22:18:31Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-11-04T22:18:31Z",
+    "sequence": 5,
     "stage": "Quarterfinals",
     "start": "2026-11-04T22:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "GEN",
     "team2": "LYON"
   },
