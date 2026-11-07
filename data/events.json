@@ -547,13 +547,13 @@
     "best_of": 5,
     "format_version": 4,
     "id": "115660540726095103",
-    "last_modified": "2026-11-06T23:35:35Z",
+    "last_modified": "2026-11-07T00:09:37Z",
     "score": [
-      1,
+      2,
       0
     ],
-    "score_checked_at": "2026-11-06T23:35:35Z",
-    "sequence": 6,
+    "score_checked_at": "2026-11-07T00:09:37Z",
+    "sequence": 7,
     "stage": "Quarterfinals",
     "start": "2026-11-06T22:00:00Z",
     "state": "inProgress",
