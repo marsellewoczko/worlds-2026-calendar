@@ -607,11 +607,16 @@
     "best_of": 5,
     "format_version": 4,
     "id": "115660540726095127",
-    "last_modified": "2026-11-05T01:44:47Z",
-    "sequence": 6,
+    "last_modified": "2026-11-07T22:08:41Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-11-07T22:08:41Z",
+    "sequence": 7,
     "stage": "Semifinals",
     "start": "2026-11-07T22:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "GEN",
     "team2": "IG"
   },
