@@ -595,13 +595,18 @@
     "best_of": 5,
     "format_version": 4,
     "id": "115660540726095121",
-    "last_modified": "2026-11-07T02:21:30Z",
-    "sequence": 6,
+    "last_modified": "2026-11-08T22:09:26Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-11-08T22:09:26Z",
+    "sequence": 7,
     "stage": "Semifinals",
     "start": "2026-11-08T22:00:00Z",
-    "state": "unstarted",
-    "team1": "T1",
-    "team2": "BLG"
+    "state": "inProgress",
+    "team1": "BLG",
+    "team2": "T1"
   },
   "115660540726095127": {
     "best_of": 5,
