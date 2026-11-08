@@ -595,13 +595,13 @@
     "best_of": 5,
     "format_version": 4,
     "id": "115660540726095121",
-    "last_modified": "2026-11-08T22:09:26Z",
+    "last_modified": "2026-11-08T23:08:15Z",
     "score": [
-      0,
+      1,
       0
     ],
-    "score_checked_at": "2026-11-08T22:09:26Z",
-    "sequence": 7,
+    "score_checked_at": "2026-11-08T23:08:15Z",
+    "sequence": 8,
     "stage": "Semifinals",
     "start": "2026-11-08T22:00:00Z",
     "state": "inProgress",
