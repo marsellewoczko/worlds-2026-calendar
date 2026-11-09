@@ -595,16 +595,15 @@
     "best_of": 5,
     "format_version": 4,
     "id": "115660540726095121",
-    "last_modified": "2026-11-09T01:05:04Z",
+    "last_modified": "2026-11-09T02:10:03Z",
     "score": [
-      2,
+      3,
       1
     ],
-    "score_checked_at": "2026-11-09T01:05:04Z",
-    "sequence": 10,
+    "sequence": 11,
     "stage": "Semifinals",
     "start": "2026-11-08T22:00:00Z",
-    "state": "inProgress",
+    "state": "completed",
     "team1": "BLG",
     "team2": "T1"
   },
@@ -628,13 +627,13 @@
     "best_of": 5,
     "format_version": 4,
     "id": "115660540726095133",
-    "last_modified": "2026-11-08T00:59:16Z",
-    "sequence": 4,
+    "last_modified": "2026-11-09T02:10:03Z",
+    "sequence": 5,
     "stage": "Finals",
     "start": "2026-11-14T19:00:00Z",
     "state": "unstarted",
-    "team1": "TBD",
-    "team2": "GEN"
+    "team1": "GEN",
+    "team2": "BLG"
   },
   "115660588583040710": {
     "best_of": 5,
