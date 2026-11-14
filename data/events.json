@@ -627,11 +627,16 @@
     "best_of": 5,
     "format_version": 4,
     "id": "115660540726095133",
-    "last_modified": "2026-11-09T02:10:03Z",
-    "sequence": 5,
+    "last_modified": "2026-11-14T19:01:47Z",
+    "score": [
+      0,
+      0
+    ],
+    "score_checked_at": "2026-11-14T19:01:47Z",
+    "sequence": 6,
     "stage": "Finals",
     "start": "2026-11-14T19:00:00Z",
-    "state": "unstarted",
+    "state": "inProgress",
     "team1": "GEN",
     "team2": "BLG"
   },
